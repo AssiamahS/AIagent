@@ -1,6 +1,6 @@
 import Foundation
 
-/// Talks to the free GitHub Models inference API when a token is set,
+/// Talks to OpenRouter's free models when a key is set,
 /// otherwise falls back to a built-in question bank so the app works offline.
 struct LLMClient {
 
@@ -9,11 +9,16 @@ struct LLMClient {
         let content: String
     }
 
-    static var githubToken: String {
-        UserDefaults.standard.string(forKey: "githubModelsToken") ?? ""
+    static var apiKey: String {
+        UserDefaults.standard.string(forKey: "openRouterKey") ?? ""
     }
 
-    static var hasLiveBrain: Bool { !githubToken.isEmpty }
+    static var model: String {
+        let m = UserDefaults.standard.string(forKey: "openRouterModel") ?? ""
+        return m.isEmpty ? "google/gemma-4-26b-a4b-it:free" : m
+    }
+
+    static var hasLiveBrain: Bool { !apiKey.isEmpty }
 
     static func systemPrompt(role: String, candidateName: String) -> String {
         """
@@ -29,9 +34,9 @@ struct LLMClient {
 
     /// One chat completion round-trip. Throws on network/API failure.
     static func complete(messages: [ChatMessage], maxTokens: Int = 300) async throws -> String {
-        var request = URLRequest(url: URL(string: "https://models.github.ai/inference/chat/completions")!)
+        var request = URLRequest(url: URL(string: "https://openrouter.ai/api/v1/chat/completions")!)
         request.httpMethod = "POST"
-        request.setValue("Bearer \(githubToken)", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         struct Body: Codable {
@@ -41,7 +46,7 @@ struct LLMClient {
             let temperature: Double
         }
         request.httpBody = try JSONEncoder().encode(
-            Body(model: "openai/gpt-4o-mini", messages: messages, max_tokens: maxTokens, temperature: 0.7)
+            Body(model: model, messages: messages, max_tokens: maxTokens, temperature: 0.7)
         )
 
         let (data, response) = try await URLSession.shared.data(for: request)
@@ -121,11 +126,11 @@ struct LLMClient {
         var improvements: [String] = []
         if avg >= 40 { strengths.append("Good answer length — you gave the interviewer something to work with.") }
         if avg < 25 { improvements.append("Answers were short. Aim for 45–90 seconds using Situation → Action → Result.") }
-        improvements.append("Add a GitHub Models token in Settings to unlock AI scoring and adaptive follow-up questions.")
+        improvements.append("Add an OpenRouter key in Settings to unlock AI scoring and adaptive follow-up questions.")
         return InterviewReport(
             communication: communication, content: content, confidence: confidence,
             strengths: strengths, improvements: improvements,
-            summary: "Practice interview complete: \(answers.count) answers, ~\(avg) words per answer. This report was generated locally — add a free GitHub token in Settings for full AI feedback."
+            summary: "Practice interview complete: \(answers.count) answers, ~\(avg) words per answer. This report was generated locally — add a free OpenRouter key in Settings for full AI feedback."
         )
     }
 }

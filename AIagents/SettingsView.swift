@@ -3,7 +3,8 @@ import SwiftUI
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
     @AppStorage("candidateName") private var candidateName = "Candidate"
-    @AppStorage("githubModelsToken") private var githubToken = ""
+    @AppStorage("openRouterKey") private var openRouterKey = ""
+    @AppStorage("openRouterModel") private var openRouterModel = ""
     @AppStorage("elevenLabsKey") private var elevenKey = ""
     @AppStorage("elevenLabsVoiceId") private var elevenVoice = ""
 
@@ -15,13 +16,16 @@ struct SettingsView: View {
                 }
 
                 Section {
-                    SecureField("GitHub token (models:read)", text: $githubToken)
+                    SecureField("OpenRouter API key (sk-or-…)", text: $openRouterKey)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
+                    TextField("Model (blank = free Gemma)", text: $openRouterModel)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                 } header: {
-                    Text("AI Brain — GitHub Models (free)")
+                    Text("AI Brain — OpenRouter (free)")
                 } footer: {
-                    Text("Free adaptive questions + real scoring. Create a fine-grained token at github.com/settings/tokens with the Models permission. Without it, the app uses a built-in question bank.")
+                    Text("Free adaptive questions + real scoring via OpenRouter's free models (default: google/gemma-4-26b-a4b-it:free). Get a key at openrouter.ai. Without it, the app uses a built-in question bank.")
                 }
 
                 Section {
