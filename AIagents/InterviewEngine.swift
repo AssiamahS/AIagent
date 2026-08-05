@@ -18,6 +18,10 @@ final class InterviewEngine: ObservableObject {
     @AppStorage("roleId") var roleId = "general"
     @AppStorage("roleTitle") var roleTitle = "General / Behavioral"
 
+    /// Job-specific practice: set from the Jobs tab, cleared on lobby role change.
+    @Published var jobContext: String = ""
+    @Published var selectedTab: Int = 0
+
     let speech = SpeechManager()
     let speaker = Speaker()
 
@@ -30,6 +34,18 @@ final class InterviewEngine: ObservableObject {
     private var startedAt: Date?
 
     // MARK: - Lifecycle
+
+    /// Called from the Jobs tab: tailor the interview to a specific application.
+    func prepareInterview(role: String, company: String, jobDescription: String) {
+        let title = [role, company].filter { !$0.isEmpty }.joined(separator: " at ")
+        if !title.isEmpty {
+            roleTitle = title
+            roleId = "general"
+        }
+        jobContext = jobDescription
+        phase = .lobby
+        selectedTab = 0
+    }
 
     func startInterview() {
         turns = []
@@ -96,8 +112,12 @@ final class InterviewEngine: ObservableObject {
     }
 
     private func liveQuestion(isFirst: Bool) async -> String {
+        var system = LLMClient.systemPrompt(role: roleTitle, candidateName: candidateName)
+        if !jobContext.isEmpty {
+            system += "\nThe job description follows — ground your questions in it:\n\(jobContext.prefix(2000))"
+        }
         var messages: [LLMClient.ChatMessage] = [
-            .init(role: "system", content: LLMClient.systemPrompt(role: roleTitle, candidateName: candidateName))
+            .init(role: "system", content: system)
         ]
         for turn in turns {
             messages.append(.init(role: turn.speaker == .interviewer ? "assistant" : "user", content: turn.text))

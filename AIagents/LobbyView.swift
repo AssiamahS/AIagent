@@ -155,6 +155,7 @@ struct LobbyView: View {
                         Button {
                             engine.roleId = role.id
                             engine.roleTitle = role.title
+                            engine.jobContext = ""   // preset picked → drop job-specific JD
                         } label: {
                             HStack(spacing: 6) {
                                 Image(systemName: role.icon)
