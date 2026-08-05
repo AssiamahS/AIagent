@@ -1,0 +1,38 @@
+name: AIagents
+options:
+  bundleIdPrefix: com.djsly
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "26.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: QGMAWHX827
+    MARKETING_VERSION: 1.0.1
+    CURRENT_PROJECT_VERSION: 1
+targets:
+  AIagents:
+    type: application
+    platform: iOS
+    sources:
+      - path: AIagents
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.djsly.aiagents
+      CODE_SIGN_STYLE: Automatic
+      TARGETED_DEVICE_FAMILY: 1
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+      SUPPORTS_XR_DESIGNED_FOR: NO
+    info:
+      path: AIagents/Resources/Info.plist
+      properties:
+        CFBundleName: AIagents
+        CFBundleDisplayName: A.I.agents
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        ITSAppUsesNonExemptEncryption: false
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCameraUsageDescription: "Your camera is shown to you during the interview, just like a real video call."
+        NSMicrophoneUsageDescription: "The microphone captures your spoken answers during the interview."
+        NSSpeechRecognitionUsageDescription: "Speech recognition transcribes your answers so the AI interviewer can respond to them."
