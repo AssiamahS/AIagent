@@ -7,6 +7,8 @@ struct SettingsView: View {
     @AppStorage("openRouterModel") private var openRouterModel = ""
     @AppStorage("elevenLabsKey") private var elevenKey = ""
     @AppStorage("elevenLabsVoiceId") private var elevenVoice = ""
+    @AppStorage("resumeText") private var resumeText = ""
+    @AppStorage("resumeTextEdited") private var resumeEdited = false
 
     var body: some View {
         NavigationStack {
@@ -39,6 +41,23 @@ struct SettingsView: View {
                     Text("Voice — ElevenLabs (optional)")
                 } footer: {
                     Text("Studio-quality voice for Victoria. Free tier at elevenlabs.io. Without a key, the built-in iOS voice is used.")
+                }
+
+                Section {
+                    TextEditor(text: $resumeText)
+                        .frame(minHeight: 140)
+                        .font(.footnote)
+                        .onChange(of: resumeText) { _, _ in resumeEdited = true }
+                    if resumeEdited {
+                        Button("Reset to auto-synced resume") {
+                            resumeEdited = false
+                            resumeText = ""
+                        }
+                    }
+                } header: {
+                    Text("My resume (used for job scoring)")
+                } footer: {
+                    Text("Auto-synced from your Scipio site. Edit here to override; scoring compares this text against each job description.")
                 }
 
                 Section {

@@ -1,42 +1,28 @@
 import SwiftUI
 
-/// The place for every job applied to: manual entries + Scipio's auto-applies.
+/// The place for every job applied to: manual entries + Scipio's auto-applies,
+/// plus the Fortune 500 directory.
 struct JobsView: View {
     @EnvironmentObject var engine: InterviewEngine
     @EnvironmentObject var store: JobStore
     @State private var showAdd = false
+    @State private var segment = 0
 
     var body: some View {
         NavigationStack {
-            List {
-                statsHeader
-
-                Section("My applications") {
-                    if store.manual.isEmpty {
-                        Text("Jobs you apply to by hand go here — tap + to add one.")
-                            .font(.footnote)
-                            .foregroundStyle(.secondary)
-                    }
-                    ForEach(store.manual) { job in
-                        NavigationLink {
-                            JobDetailView(job: binding(for: job))
-                        } label: {
-                            manualRow(job)
-                        }
-                    }
-                    .onDelete { store.manual.remove(atOffsets: $0) }
+            VStack(spacing: 0) {
+                Picker("Section", selection: $segment) {
+                    Text("Applied").tag(0)
+                    Text("Fortune 500").tag(1)
                 }
+                .pickerStyle(.segmented)
+                .padding(.horizontal)
+                .padding(.bottom, 4)
 
-                Section("Auto-applied by Scipio") {
-                    if store.loadingScipio && store.scipio.isEmpty {
-                        ProgressView()
-                    }
-                    if let err = store.scipioError {
-                        Text(err).font(.footnote).foregroundStyle(.secondary)
-                    }
-                    ForEach(store.scipio.prefix(50)) { run in
-                        scipioRow(run)
-                    }
+                if segment == 0 {
+                    appliedList
+                } else {
+                    CompaniesView()
                 }
             }
             .navigationTitle("Jobs")
@@ -46,20 +32,62 @@ struct JobsView: View {
                 }
             }
             .sheet(isPresented: $showAdd) { AddJobView() }
-            .refreshable { await store.refreshScipio() }
-            .task { if store.scipio.isEmpty { await store.refreshScipio() } }
         }
     }
 
-    private func binding(for job: ManualJob) -> Binding<ManualJob> {
-        Binding(
-            get: { store.manual.first(where: { $0.id == job.id }) ?? job },
-            set: { updated in
-                if let idx = store.manual.firstIndex(where: { $0.id == job.id }) {
-                    store.manual[idx] = updated
+    // MARK: - Applied
+
+    private var appliedList: some View {
+        List {
+            statsHeader
+
+            Section("My applications") {
+                if store.manual.isEmpty {
+                    Text("Jobs you apply to by hand go here — tap + to add one, or add from the Fortune 500 tab.")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+                ForEach(store.manualCompanies, id: \.company) { entry in
+                    NavigationLink {
+                        CompanyJobsList(company: entry.company)
+                    } label: {
+                        HStack {
+                            Text(entry.company).font(.subheadline.weight(.semibold))
+                            Spacer()
+                            Text("\(entry.count)")
+                                .font(.caption.bold())
+                                .padding(.horizontal, 8).padding(.vertical, 3)
+                                .background(Color.blue.opacity(0.3), in: Capsule())
+                                .foregroundStyle(.blue)
+                        }
+                    }
                 }
             }
-        )
+
+            Section("Auto-applied by Scipio") {
+                if store.loadingScipio && store.scipio.isEmpty {
+                    ProgressView()
+                }
+                if let err = store.scipioError {
+                    Text(err).font(.footnote).foregroundStyle(.secondary)
+                }
+                ForEach(store.scipio.prefix(50)) { run in
+                    NavigationLink {
+                        ScipioJobDetailView(run: run)
+                    } label: {
+                        scipioRow(run)
+                    }
+                }
+            }
+        }
+        .refreshable {
+            await store.refreshScipio()
+            await store.refreshResume()
+        }
+        .task {
+            if store.scipio.isEmpty { await store.refreshScipio() }
+            await store.refreshResume()
+        }
     }
 
     private var statsHeader: some View {
@@ -85,19 +113,6 @@ struct JobsView: View {
         .background(Color(white: 0.12), in: RoundedRectangle(cornerRadius: 12))
     }
 
-    private func manualRow(_ job: ManualJob) -> some View {
-        VStack(alignment: .leading, spacing: 3) {
-            Text(job.role).font(.subheadline.weight(.semibold))
-            Text(job.company).font(.footnote).foregroundStyle(.secondary)
-            Text(job.status.rawValue)
-                .font(.caption2.weight(.semibold))
-                .padding(.horizontal, 8).padding(.vertical, 2)
-                .background(job.status.color.opacity(0.25), in: Capsule())
-                .foregroundStyle(job.status.color)
-        }
-        .padding(.vertical, 2)
-    }
-
     private func scipioRow(_ run: ScipioRun) -> some View {
         VStack(alignment: .leading, spacing: 3) {
             Text(run.role ?? "Unknown role").font(.subheadline.weight(.semibold))
@@ -108,10 +123,71 @@ struct JobsView: View {
                     .padding(.horizontal, 8).padding(.vertical, 2)
                     .background((run.isConfirmed ? Color.green : Color.gray).opacity(0.25), in: Capsule())
                     .foregroundStyle(run.isConfirmed ? Color.green : Color.gray)
+                if let ats = run.atsScore {
+                    Text("ATS \(ats)")
+                        .font(.caption2.weight(.semibold))
+                        .padding(.horizontal, 8).padding(.vertical, 2)
+                        .background(Color.purple.opacity(0.25), in: Capsule())
+                        .foregroundStyle(.purple)
+                }
                 Text(run.day).font(.caption2).foregroundStyle(.tertiary)
             }
         }
         .padding(.vertical, 2)
+    }
+}
+
+/// All my applications at one company.
+struct CompanyJobsList: View {
+    @EnvironmentObject var store: JobStore
+    let company: String
+
+    var body: some View {
+        List {
+            ForEach(store.manual.filter { ($0.company.isEmpty ? "Unknown" : $0.company) == company }) { job in
+                NavigationLink {
+                    JobDetailView(job: binding(for: job))
+                } label: {
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text(job.role.isEmpty ? "Untitled role" : job.role)
+                            .font(.subheadline.weight(.semibold))
+                        HStack {
+                            Text(job.status.rawValue)
+                                .font(.caption2.weight(.semibold))
+                                .padding(.horizontal, 8).padding(.vertical, 2)
+                                .background(job.status.color.opacity(0.25), in: Capsule())
+                                .foregroundStyle(job.status.color)
+                            if let odds = job.score?.odds {
+                                Text("Odds \(odds)%")
+                                    .font(.caption2.weight(.semibold))
+                                    .padding(.horizontal, 8).padding(.vertical, 2)
+                                    .background(Color.purple.opacity(0.25), in: Capsule())
+                                    .foregroundStyle(.purple)
+                            }
+                        }
+                    }
+                }
+            }
+            .onDelete { offsets in
+                let mine = store.manual.filter { ($0.company.isEmpty ? "Unknown" : $0.company) == company }
+                for i in offsets {
+                    store.manual.removeAll { $0.id == mine[i].id }
+                }
+            }
+        }
+        .navigationTitle(company)
+        .navigationBarTitleDisplayMode(.inline)
+    }
+
+    private func binding(for job: ManualJob) -> Binding<ManualJob> {
+        Binding(
+            get: { store.manual.first(where: { $0.id == job.id }) ?? job },
+            set: { updated in
+                if let idx = store.manual.firstIndex(where: { $0.id == job.id }) {
+                    store.manual[idx] = updated
+                }
+            }
+        )
     }
 }
 
@@ -137,7 +213,7 @@ struct AddJobView: View {
                         ForEach(JobStatus.allCases) { s in Text(s.rawValue).tag(s) }
                     }
                 }
-                Section("Job description (for interview practice)") {
+                Section("Job description (for scoring + interview practice)") {
                     TextEditor(text: $jd).frame(minHeight: 120)
                 }
             }
@@ -164,10 +240,15 @@ struct AddJobView: View {
 
 struct JobDetailView: View {
     @EnvironmentObject var engine: InterviewEngine
+    @EnvironmentObject var store: JobStore
     @Binding var job: ManualJob
+    @State private var scoring = false
+    @State private var scoreError: String?
 
     var body: some View {
         Form {
+            scoreSection
+
             Section("Job") {
                 TextField("Company", text: $job.company)
                 TextField("Role", text: $job.role)
@@ -196,5 +277,94 @@ struct JobDetailView: View {
         }
         .navigationTitle(job.company.isEmpty ? "Job" : job.company)
         .navigationBarTitleDisplayMode(.inline)
+    }
+
+    @ViewBuilder
+    private var scoreSection: some View {
+        Section("Will I get it?") {
+            if let score = job.score {
+                HStack(spacing: 14) {
+                    oddsRing(score.odds, label: "Odds")
+                    oddsRing(score.atsScore, label: "ATS")
+                    Text(score.verdict).font(.footnote)
+                }
+                .padding(.vertical, 4)
+                if !score.missingKeywords.isEmpty {
+                    Text("Missing: " + score.missingKeywords.joined(separator: ", "))
+                        .font(.caption)
+                        .foregroundStyle(.orange)
+                }
+                ForEach(score.fixes, id: \.self) { fix in
+                    Label(fix, systemImage: "wrench.adjustable")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            if let reqs = job.score?.requirements, !reqs.isEmpty {
+                DisclosureGroup("What this application needs") {
+                    ForEach(reqs, id: \.self) { req in
+                        Label(req, systemImage: "checklist")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+            if let err = scoreError {
+                Text(err).font(.caption).foregroundStyle(.red)
+            }
+            Button {
+                scoreJob()
+            } label: {
+                if scoring {
+                    HStack { ProgressView(); Text("Scoring against your resume…") }
+                } else {
+                    Label(job.score == nil ? "Score my chances (ATS)" : "Re-score",
+                          systemImage: "gauge.with.needle")
+                }
+            }
+            .disabled(scoring)
+        }
+    }
+
+    private func oddsRing(_ value: Int, label: String) -> some View {
+        VStack(spacing: 3) {
+            ZStack {
+                Circle().stroke(Color(white: 0.18), lineWidth: 6)
+                Circle()
+                    .trim(from: 0, to: CGFloat(value) / 100)
+                    .stroke(value >= 70 ? Color.green : (value >= 45 ? .orange : .red),
+                            style: StrokeStyle(lineWidth: 6, lineCap: .round))
+                    .rotationEffect(.degrees(-90))
+                Text("\(value)").font(.subheadline.bold())
+            }
+            .frame(width: 52, height: 52)
+            Text(label).font(.caption2).foregroundStyle(.secondary)
+        }
+    }
+
+    private func scoreJob() {
+        scoreError = nil
+        guard LLMClient.hasLiveBrain else {
+            scoreError = "Add your OpenRouter key in Settings first."
+            return
+        }
+        guard !job.jobDescription.isEmpty else {
+            scoreError = "Paste the job description above first."
+            return
+        }
+        guard !store.resumeText.isEmpty else {
+            scoreError = "No resume loaded — pull to refresh the Jobs list or paste one in Settings."
+            return
+        }
+        scoring = true
+        Task {
+            defer { scoring = false }
+            do {
+                job.score = try await LLMClient.scoreJob(resume: store.resumeText,
+                                                         jobDescription: job.jobDescription)
+            } catch {
+                scoreError = "Scoring failed — free model may be busy, try again."
+            }
+        }
     }
 }

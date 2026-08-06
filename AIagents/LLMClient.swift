@@ -66,6 +66,36 @@ struct LLMClient {
         return text.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
+    // MARK: - ATS job scoring
+
+    /// Score a manual application: resume vs job description, ATS in mind.
+    static func scoreJob(resume: String, jobDescription: String) async throws -> JobScore {
+        let prompt = """
+        You are an ATS system plus a blunt senior recruiter. Compare this resume to this job description.
+        Respond with ONLY valid JSON, no code fences, exactly this shape:
+        {"odds": 0-100, "atsScore": 0-100, "verdict": "one blunt sentence on whether they'll get it", \
+        "missingKeywords": ["keywords the ATS wants that the resume lacks"], \
+        "fixes": ["3 concrete resume edits that would raise the score"], \
+        "requirements": ["everything this application needs to be sent: documents, portfolio, certifications, questions to expect"]}
+
+        odds = realistic chance of getting an interview. atsScore = keyword/requirements match a screening system would compute.
+
+        RESUME:
+        \(resume.prefix(6000))
+
+        JOB DESCRIPTION:
+        \(jobDescription.prefix(6000))
+        """
+        var raw = try await complete(messages: [.init(role: "user", content: prompt)], maxTokens: 700)
+        raw = raw.replacingOccurrences(of: "```json", with: "")
+            .replacingOccurrences(of: "```", with: "")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        guard let data = raw.data(using: .utf8) else {
+            throw NSError(domain: "LLMClient", code: -3)
+        }
+        return try JSONDecoder().decode(JobScore.self, from: data)
+    }
+
     // MARK: - Offline question bank fallback
 
     static func bankQuestions(forRoleId roleId: String) -> [String] {
