@@ -13,16 +13,19 @@ struct JobsView: View {
             VStack(spacing: 0) {
                 Picker("Section", selection: $segment) {
                     Text("Applied").tag(0)
-                    Text("Fortune 500").tag(1)
+                    Text("F500").tag(1)
+                    Text("Health").tag(2)
+                    Text("Finance").tag(3)
                 }
                 .pickerStyle(.segmented)
                 .padding(.horizontal)
                 .padding(.bottom, 4)
 
-                if segment == 0 {
-                    appliedList
-                } else {
-                    CompaniesView()
+                switch segment {
+                case 0: appliedList
+                case 1: CompaniesView()
+                case 2: DirectoryView(title: "Healthcare", resource: "Healthcare")
+                default: DirectoryView(title: "Finance", resource: "Finance")
                 }
             }
             .navigationTitle("Jobs")
@@ -262,16 +265,32 @@ struct AddJobView: View {
     @State private var url = ""
     @State private var status: JobStatus = .applied
     @State private var jd = ""
+    @State private var fetching = false
+    @State private var fetchNote: String?
 
     var body: some View {
         NavigationStack {
             Form {
                 Section("Job") {
-                    TextField("Company", text: $company)
-                    TextField("Role / title", text: $role)
-                    TextField("Link (optional)", text: $url)
+                    TextField("Paste the job link — details auto-fill", text: $url)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
+                        .keyboardType(.URL)
+                    Button {
+                        fetchFromLink()
+                    } label: {
+                        if fetching {
+                            HStack { ProgressView(); Text("Reading the posting…") }
+                        } else {
+                            Label("Fill from link", systemImage: "wand.and.stars")
+                        }
+                    }
+                    .disabled(fetching || url.isEmpty)
+                    if let note = fetchNote {
+                        Text(note).font(.caption).foregroundStyle(.secondary)
+                    }
+                    TextField("Company", text: $company)
+                    TextField("Role / title", text: $role)
                     Picker("Status", selection: $status) {
                         ForEach(JobStatus.allCases) { s in Text(s.rawValue).tag(s) }
                     }
@@ -299,6 +318,21 @@ struct AddJobView: View {
             }
         }
     }
+
+    private func fetchFromLink() {
+        fetching = true
+        fetchNote = nil
+        Task {
+            defer { fetching = false }
+            let fetched = await JDFetcher.fetch(from: url)
+            if let c = fetched.company, company.isEmpty { company = c }
+            if let r = fetched.role, role.isEmpty { role = r }
+            if let d = fetched.jobDescription, jd.isEmpty { jd = d }
+            fetchNote = fetched.jobDescription == nil
+                ? "Couldn't read that page (may need JavaScript) — fill the fields by hand."
+                : "Filled from the posting — edit anything that looks off."
+        }
+    }
 }
 
 struct JobDetailView: View {
@@ -309,6 +343,8 @@ struct JobDetailView: View {
     @State private var scoreError: String?
     @State private var dispatching = false
     @State private var dispatchResult: String?
+    @State private var refetching = false
+    @State private var refetchNote: String?
     @AppStorage("githubPAT") private var githubPAT = ""
 
     var body: some View {
@@ -327,6 +363,21 @@ struct JobDetailView: View {
             }
             Section("Job description") {
                 TextEditor(text: $job.jobDescription).frame(minHeight: 120)
+                if !job.url.isEmpty {
+                    Button {
+                        refetchJD()
+                    } label: {
+                        if refetching {
+                            HStack { ProgressView(); Text("Reading the posting…") }
+                        } else {
+                            Label("Re-fetch clean JD from link", systemImage: "arrow.triangle.2.circlepath")
+                        }
+                    }
+                    .disabled(refetching)
+                    if let note = refetchNote {
+                        Text(note).font(.caption).foregroundStyle(.secondary)
+                    }
+                }
             }
             Section("Notes") {
                 TextEditor(text: $job.notes).frame(minHeight: 80)
@@ -347,7 +398,7 @@ struct JobDetailView: View {
                     Text(r).font(.caption).foregroundStyle(.secondary)
                 }
             } footer: {
-                Text("Runs in the cloud with a resume tailored to this exact job description — no laptop needed. Check Applied in ~15 minutes for the result and the PDF sent.")
+                Text(cloudApplyFooter)
             }
 
             Section {
@@ -362,6 +413,32 @@ struct JobDetailView: View {
         }
         .navigationTitle(job.company.isEmpty ? "Job" : job.company)
         .navigationBarTitleDisplayMode(.inline)
+    }
+
+    /// Honest per-ATS expectation instead of a blanket promise.
+    private var cloudApplyFooter: String {
+        let base = "Runs in the cloud with a resume tailored to this exact job description — no laptop needed. Check Applied in ~15 minutes for the result and the PDF sent."
+        guard let ats = JDFetcher.atsInfo(for: job.url) else { return base }
+        return ats.autoSubmit
+            ? "\(ats.name) posting — Scipio can fill AND submit this one end-to-end. " + base
+            : "\(ats.name) posting — Scipio can't fully auto-submit here yet (needs an account/login flow). It will still tailor a resume and log the attempt; finish the submit from their site if it stalls."
+    }
+
+    private func refetchJD() {
+        refetching = true
+        refetchNote = nil
+        Task {
+            defer { refetching = false }
+            let fetched = await JDFetcher.fetch(from: job.url)
+            if let d = fetched.jobDescription, !d.isEmpty {
+                job.jobDescription = d
+                if let c = fetched.company, job.company.isEmpty { job.company = c }
+                if let r = fetched.role, job.role.isEmpty { job.role = r }
+                refetchNote = "Clean description pulled from the posting."
+            } else {
+                refetchNote = "Couldn't read that page (may need JavaScript) — paste the JD by hand."
+            }
+        }
     }
 
     private func cloudApply() {

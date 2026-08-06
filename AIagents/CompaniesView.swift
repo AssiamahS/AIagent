@@ -288,38 +288,17 @@ struct CompanyDetailView: View {
         fetching = true
         Task {
             defer { fetching = false }
-            var jd = ""
-            if let url = URL(string: jobLink) {
-                jd = (try? await Self.fetchJobDescription(url)) ?? ""
-            }
+            let fetched = await JDFetcher.fetch(from: jobLink)
+            let jd = fetched.jobDescription ?? ""
             if jd.isEmpty {
                 fetchError = "Couldn't extract the description (site may need JavaScript) — job saved anyway, paste the JD in its page."
             }
             store.manual.insert(
-                ManualJob(company: company.name, role: company.suggestedRole,
+                ManualJob(company: fetched.company ?? company.name,
+                          role: fetched.role ?? company.suggestedRole,
                           url: jobLink, status: .applied, jobDescription: jd),
                 at: 0)
             savedJob = true
         }
-    }
-
-    /// Plain fetch + tag strip. Enough for Greenhouse/Lever-style pages;
-    /// JS-only ATSes come back empty and the user pastes instead.
-    static func fetchJobDescription(_ url: URL) async throws -> String {
-        var request = URLRequest(url: url)
-        request.setValue("Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X)", forHTTPHeaderField: "User-Agent")
-        let (data, _) = try await URLSession.shared.data(for: request)
-        guard var html = String(data: data, encoding: .utf8) else { return "" }
-        for tag in ["script", "style", "nav", "header", "footer"] {
-            html = html.replacingOccurrences(
-                of: "<\(tag)[\\s\\S]*?</\(tag)>", with: " ",
-                options: [.regularExpression, .caseInsensitive])
-        }
-        var text = html.replacingOccurrences(of: "<[^>]+>", with: " ", options: .regularExpression)
-        text = text.replacingOccurrences(of: "&nbsp;", with: " ")
-            .replacingOccurrences(of: "&amp;", with: "&")
-            .replacingOccurrences(of: "\\s{2,}", with: "\n", options: .regularExpression)
-            .trimmingCharacters(in: .whitespacesAndNewlines)
-        return text.count > 200 ? String(text.prefix(8000)) : ""
     }
 }

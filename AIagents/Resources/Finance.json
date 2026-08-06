@@ -1,0 +1,5882 @@
+[
+{
+"name": "Bank Of America, National Association",
+"city": "Charlotte",
+"state": "NC",
+"type": "Bank",
+"ownership": "$2,672.2B assets"
+},
+{
+"name": "Goldman Sachs Bank Usa",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$751.8B assets"
+},
+{
+"name": "Capital One, National Association",
+"city": "Mclean",
+"state": "VA",
+"type": "Bank",
+"ownership": "$672.0B assets"
+},
+{
+"name": "Pnc Bank, National Association",
+"city": "Wilmington",
+"state": "DE",
+"type": "Bank",
+"ownership": "$567.9B assets"
+},
+{
+"name": "Truist Bank",
+"city": "Charlotte",
+"state": "NC",
+"type": "Bank",
+"ownership": "$541.2B assets"
+},
+{
+"name": "The Bank Of New York Mellon",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$467.3B assets"
+},
+{
+"name": "State Street Bank And Trust Company",
+"city": "Boston",
+"state": "MA",
+"type": "Bank",
+"ownership": "$386.5B assets"
+},
+{
+"name": "Td Bank, National Association",
+"city": "Wilmington",
+"state": "DE",
+"type": "Bank",
+"ownership": "$345.6B assets"
+},
+{
+"name": "Morgan Stanley Private Bank, National Association",
+"city": "Purchase",
+"state": "NY",
+"type": "Bank",
+"ownership": "$241.4B assets"
+},
+{
+"name": "First-Citizens Bank & Trust Company",
+"city": "Raleigh",
+"state": "NC",
+"type": "Bank",
+"ownership": "$235.5B assets"
+},
+{
+"name": "Citizens Bank, National Association",
+"city": "Providence",
+"state": "RI",
+"type": "Bank",
+"ownership": "$227.1B assets"
+},
+{
+"name": "Manufacturers And Traders Trust Company",
+"city": "Buffalo",
+"state": "NY",
+"type": "Bank",
+"ownership": "$214.2B assets"
+},
+{
+"name": "Hsbc Bank Usa, National Association",
+"city": "Tysons",
+"state": "VA",
+"type": "Bank",
+"ownership": "$167.7B assets"
+},
+{
+"name": "Santander Bank, N.A.",
+"city": "Wilmington",
+"state": "DE",
+"type": "Bank",
+"ownership": "$106.1B assets"
+},
+{
+"name": "Flagstar Bank, National Association",
+"city": "Hicksville",
+"state": "NY",
+"type": "Bank",
+"ownership": "$87.1B assets"
+},
+{
+"name": "Webster Bank, National Association",
+"city": "Stamford",
+"state": "CT",
+"type": "Bank",
+"ownership": "$85.5B assets"
+},
+{
+"name": "Southstate Bank, National Association",
+"city": "Winter Haven",
+"state": "FL",
+"type": "Bank",
+"ownership": "$67.9B assets"
+},
+{
+"name": "Valley National Bank",
+"city": "Passaic",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$64.4B assets"
+},
+{
+"name": "First National Bank Of Pennsylvania",
+"city": "Greenville",
+"state": "PA",
+"type": "Bank",
+"ownership": "$50.4B assets"
+},
+{
+"name": "Everbank, National Association",
+"city": "Jacksonville",
+"state": "FL",
+"type": "Bank",
+"ownership": "$47.2B assets"
+},
+{
+"name": "Barclays Bank Delaware",
+"city": "Wilmington",
+"state": "DE",
+"type": "Bank",
+"ownership": "$46.6B assets"
+},
+{
+"name": "Raymond James Bank",
+"city": "Saint Petersburg",
+"state": "FL",
+"type": "Bank",
+"ownership": "$45.7B assets"
+},
+{
+"name": "Bank Of China",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$44.4B assets"
+},
+{
+"name": "Deutsche Bank Trust Company Americas",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$39.7B assets"
+},
+{
+"name": "Atlantic Union Bank",
+"city": "Richmond City",
+"state": "VA",
+"type": "Bank",
+"ownership": "$37.2B assets"
+},
+{
+"name": "Bankunited, National Association",
+"city": "Miami Lakes",
+"state": "FL",
+"type": "Bank",
+"ownership": "$35.3B assets"
+},
+{
+"name": "United Bank",
+"city": "Fairfax",
+"state": "VA",
+"type": "Bank",
+"ownership": "$33.6B assets"
+},
+{
+"name": "Td Bank Usa, National Association",
+"city": "Wilmington",
+"state": "DE",
+"type": "Bank",
+"ownership": "$32.7B assets"
+},
+{
+"name": "Fulton Bank, National Association",
+"city": "Lancaster",
+"state": "PA",
+"type": "Bank",
+"ownership": "$32.1B assets"
+},
+{
+"name": "Bny Mellon, National Association",
+"city": "Pittsburgh",
+"state": "PA",
+"type": "Bank",
+"ownership": "$30.9B assets"
+},
+{
+"name": "Eastern Bank",
+"city": "Boston",
+"state": "MA",
+"type": "Bank",
+"ownership": "$30.6B assets"
+},
+{
+"name": "City National Bank Of Florida",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$28.6B assets"
+},
+{
+"name": "United Community Bank",
+"city": "Greenville",
+"state": "SC",
+"type": "Bank",
+"ownership": "$28.1B assets"
+},
+{
+"name": "Ameris Bank",
+"city": "Atlanta",
+"state": "GA",
+"type": "Bank",
+"ownership": "$28.0B assets"
+},
+{
+"name": "Customers Bank",
+"city": "Malvern",
+"state": "PA",
+"type": "Bank",
+"ownership": "$25.9B assets"
+},
+{
+"name": "Provident Bank",
+"city": "Jersey City",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$25.2B assets"
+},
+{
+"name": "Rockland Trust Company",
+"city": "Rockland",
+"state": "MA",
+"type": "Bank",
+"ownership": "$24.8B assets"
+},
+{
+"name": "State Bank Of India",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$23.5B assets"
+},
+{
+"name": "Tristate Capital Bank",
+"city": "Pittsburgh",
+"state": "PA",
+"type": "Bank",
+"ownership": "$23.2B assets"
+},
+{
+"name": "Townebank",
+"city": "Portsmouth",
+"state": "VA",
+"type": "Bank",
+"ownership": "$22.4B assets"
+},
+{
+"name": "Beacon Bank And Trust",
+"city": "Brookline",
+"state": "MA",
+"type": "Bank",
+"ownership": "$22.2B assets"
+},
+{
+"name": "Wilmington Savings Fund Society, Fsb",
+"city": "Wilmington",
+"state": "DE",
+"type": "Bank",
+"ownership": "$22.0B assets"
+},
+{
+"name": "Seacoast National Bank",
+"city": "Stuart",
+"state": "FL",
+"type": "Bank",
+"ownership": "$21.1B assets"
+},
+{
+"name": "Apple Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$19.2B assets"
+},
+{
+"name": "Community Bank, National Association",
+"city": "Canton",
+"state": "NY",
+"type": "Bank",
+"ownership": "$17.4B assets"
+},
+{
+"name": "Northwest Bank",
+"city": "Warren",
+"state": "PA",
+"type": "Bank",
+"ownership": "$16.9B assets"
+},
+{
+"name": "Nbt Bank, National Association",
+"city": "Norwich",
+"state": "NY",
+"type": "Bank",
+"ownership": "$16.1B assets"
+},
+{
+"name": "Bank Of Baroda",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$15.8B assets"
+},
+{
+"name": "Live Oak Banking Company",
+"city": "Wilmington",
+"state": "NC",
+"type": "Bank",
+"ownership": "$15.2B assets"
+},
+{
+"name": "Dime Commercial Bank",
+"city": "Hauppauge",
+"state": "NY",
+"type": "Bank",
+"ownership": "$15.0B assets"
+},
+{
+"name": "Popular Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$15.0B assets"
+},
+{
+"name": "Oceanfirst Bank, National Association",
+"city": "Toms River",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$14.5B assets"
+},
+{
+"name": "Connectone Bank",
+"city": "Englewood Cliffs",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$14.2B assets"
+},
+{
+"name": "Israel Discount Bank Of New York",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$14.0B assets"
+},
+{
+"name": "First Bank",
+"city": "Southern Pines",
+"state": "NC",
+"type": "Bank",
+"ownership": "$12.9B assets"
+},
+{
+"name": "Dollar Bank, Federal Savings Bank",
+"city": "Pittsburgh",
+"state": "PA",
+"type": "Bank",
+"ownership": "$12.5B assets"
+},
+{
+"name": "First Commonwealth Bank",
+"city": "Indiana",
+"state": "PA",
+"type": "Bank",
+"ownership": "$12.2B assets"
+},
+{
+"name": "Safra National Bank Of New York",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$12.2B assets"
+},
+{
+"name": "Columbia Bank",
+"city": "Fair Lawn",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$11.0B assets"
+},
+{
+"name": "Bank Hapoalim B.M.",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$10.6B assets"
+},
+{
+"name": "S&T Bank",
+"city": "Indiana",
+"state": "PA",
+"type": "Bank",
+"ownership": "$9.9B assets"
+},
+{
+"name": "Eaglebank",
+"city": "Bethesda",
+"state": "MD",
+"type": "Bank",
+"ownership": "$9.9B assets"
+},
+{
+"name": "Amerant Bank, National Association",
+"city": "Coral Gables",
+"state": "FL",
+"type": "Bank",
+"ownership": "$9.9B assets"
+},
+{
+"name": "Amalgamated Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$9.2B assets"
+},
+{
+"name": "Liberty Bank",
+"city": "Middletown",
+"state": "CT",
+"type": "Bank",
+"ownership": "$9.0B assets"
+},
+{
+"name": "Metropolitan Commercial Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$8.8B assets"
+},
+{
+"name": "Rbc Bank, (Georgia) National Association",
+"city": "Atlanta",
+"state": "GA",
+"type": "Bank",
+"ownership": "$8.8B assets"
+},
+{
+"name": "Cross River Bank",
+"city": "Fort Lee",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$8.7B assets"
+},
+{
+"name": "Tompkins Community Bank",
+"city": "Ithaca",
+"state": "NY",
+"type": "Bank",
+"ownership": "$8.7B assets"
+},
+{
+"name": "Salem Five Cents Savings Bank",
+"city": "Salem",
+"state": "MA",
+"type": "Bank",
+"ownership": "$8.6B assets"
+},
+{
+"name": "Cnb Bank",
+"city": "Clearfield",
+"state": "PA",
+"type": "Bank",
+"ownership": "$8.5B assets"
+},
+{
+"name": "Forbright Bank",
+"city": "Potomac",
+"state": "MD",
+"type": "Bank",
+"ownership": "$8.3B assets"
+},
+{
+"name": "Univest  Bank And Trust Co.",
+"city": "Souderton",
+"state": "PA",
+"type": "Bank",
+"ownership": "$8.1B assets"
+},
+{
+"name": "Burke & Herbert Bank & Trust Company",
+"city": "Alexandria",
+"state": "VA",
+"type": "Bank",
+"ownership": "$7.9B assets"
+},
+{
+"name": "Comenity Bank",
+"city": "Wilmington",
+"state": "DE",
+"type": "Bank",
+"ownership": "$7.8B assets"
+},
+{
+"name": "Peapack Private Bank & Trust",
+"city": "Bedminster",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$7.7B assets"
+},
+{
+"name": "Kearny Bank",
+"city": "Kearny",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$7.6B assets"
+},
+{
+"name": "Ridgewood Savings Bank",
+"city": "Ridgewood",
+"state": "NY",
+"type": "Bank",
+"ownership": "$7.5B assets"
+},
+{
+"name": "Ocean Bank",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$7.5B assets"
+},
+{
+"name": "Bangor Savings Bank",
+"city": "Bangor",
+"state": "ME",
+"type": "Bank",
+"ownership": "$7.4B assets"
+},
+{
+"name": "Bank Of India",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$7.2B assets"
+},
+{
+"name": "Needham Bank",
+"city": "Needham",
+"state": "MA",
+"type": "Bank",
+"ownership": "$7.2B assets"
+},
+{
+"name": "The Camden National Bank",
+"city": "Camden",
+"state": "ME",
+"type": "Bank",
+"ownership": "$7.0B assets"
+},
+{
+"name": "Mid Penn Bank",
+"city": "Millersburg",
+"state": "PA",
+"type": "Bank",
+"ownership": "$6.9B assets"
+},
+{
+"name": "Cambridge Savings Bank",
+"city": "Cambridge",
+"state": "MA",
+"type": "Bank",
+"ownership": "$6.9B assets"
+},
+{
+"name": "Trustco Bank",
+"city": "Glenville",
+"state": "NY",
+"type": "Bank",
+"ownership": "$6.5B assets"
+},
+{
+"name": "The Washington Trust Company, Of Westerly",
+"city": "Westerly",
+"state": "RI",
+"type": "Bank",
+"ownership": "$6.5B assets"
+},
+{
+"name": "Five Star Bank",
+"city": "Rochester",
+"state": "NY",
+"type": "Bank",
+"ownership": "$6.3B assets"
+},
+{
+"name": "Shore United Bank, National Association",
+"city": "Easton",
+"state": "MD",
+"type": "Bank",
+"ownership": "$6.2B assets"
+},
+{
+"name": "Middlesex Savings Bank",
+"city": "Natick",
+"state": "MA",
+"type": "Bank",
+"ownership": "$6.2B assets"
+},
+{
+"name": "Emigrant Bank",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$5.9B assets"
+},
+{
+"name": "Banesco Usa",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$5.8B assets"
+},
+{
+"name": "Northfield Bank",
+"city": "Staten Island",
+"state": "NY",
+"type": "Bank",
+"ownership": "$5.7B assets"
+},
+{
+"name": "Cfg Bank",
+"city": "Lutherville",
+"state": "MD",
+"type": "Bank",
+"ownership": "$5.7B assets"
+},
+{
+"name": "Firstrust Savings Bank",
+"city": "Conshohocken",
+"state": "PA",
+"type": "Bank",
+"ownership": "$5.6B assets"
+},
+{
+"name": "Orrstown Bank",
+"city": "Harrisburg",
+"state": "PA",
+"type": "Bank",
+"ownership": "$5.6B assets"
+},
+{
+"name": "Bradesco Bank",
+"city": "Coral Gables",
+"state": "FL",
+"type": "Bank",
+"ownership": "$5.5B assets"
+},
+{
+"name": "The Cape Cod Five Cents Savings Bank",
+"city": "Hyannis",
+"state": "MA",
+"type": "Bank",
+"ownership": "$5.5B assets"
+},
+{
+"name": "The Canandaigua National Bank And Trust Company",
+"city": "Canandaigua",
+"state": "NY",
+"type": "Bank",
+"ownership": "$5.5B assets"
+},
+{
+"name": "Peoples Security Bank And Trust Company",
+"city": "Dunmore",
+"state": "PA",
+"type": "Bank",
+"ownership": "$5.4B assets"
+},
+{
+"name": "Bessemer Trust Company, National Association",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$5.4B assets"
+},
+{
+"name": "Institution For Savings In Newburyport And Its Vicinity",
+"city": "Newburyport",
+"state": "MA",
+"type": "Bank",
+"ownership": "$5.4B assets"
+},
+{
+"name": "Southern Bank And Trust Company",
+"city": "Mount Olive",
+"state": "NC",
+"type": "Bank",
+"ownership": "$5.3B assets"
+},
+{
+"name": "Leader Bank, National Association",
+"city": "Arlington",
+"state": "MA",
+"type": "Bank",
+"ownership": "$5.1B assets"
+},
+{
+"name": "Northeast Bank",
+"city": "Portland",
+"state": "ME",
+"type": "Bank",
+"ownership": "$5.0B assets"
+},
+{
+"name": "Carter Bank & Trust",
+"city": "Martinsville",
+"state": "VA",
+"type": "Bank",
+"ownership": "$4.8B assets"
+},
+{
+"name": "Bar Harbor Bank & Trust",
+"city": "Bar Harbor",
+"state": "ME",
+"type": "Bank",
+"ownership": "$4.7B assets"
+},
+{
+"name": "Metro City Bank",
+"city": "Doraville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$4.6B assets"
+},
+{
+"name": "Peoplesbank",
+"city": "Holyoke",
+"state": "MA",
+"type": "Bank",
+"ownership": "$4.6B assets"
+},
+{
+"name": "Southern First Bank",
+"city": "Greenville",
+"state": "SC",
+"type": "Bank",
+"ownership": "$4.6B assets"
+},
+{
+"name": "Hingham Institution For Savings",
+"city": "Hingham",
+"state": "MA",
+"type": "Bank",
+"ownership": "$4.5B assets"
+},
+{
+"name": "Arrow Bank National Association",
+"city": "Glens Falls",
+"state": "NY",
+"type": "Bank",
+"ownership": "$4.5B assets"
+},
+{
+"name": "The Fidelity Bank",
+"city": "Fuquay Varina",
+"state": "NC",
+"type": "Bank",
+"ownership": "$4.5B assets"
+},
+{
+"name": "Capital City Bank",
+"city": "Tallahassee",
+"state": "FL",
+"type": "Bank",
+"ownership": "$4.5B assets"
+},
+{
+"name": "Hometrust Bank",
+"city": "Asheville",
+"state": "NC",
+"type": "Bank",
+"ownership": "$4.4B assets"
+},
+{
+"name": "First Federal Bank",
+"city": "Lake City",
+"state": "FL",
+"type": "Bank",
+"ownership": "$4.4B assets"
+},
+{
+"name": "Primis Bank",
+"city": "Tappahannock",
+"state": "VA",
+"type": "Bank",
+"ownership": "$4.2B assets"
+},
+{
+"name": "The First Bank And Trust Company",
+"city": "Lebanon",
+"state": "VA",
+"type": "Bank",
+"ownership": "$4.1B assets"
+},
+{
+"name": "Mizuho Bank (Usa)",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$4.1B assets"
+},
+{
+"name": "Woori America Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$4.0B assets"
+},
+{
+"name": "Spencer Savings Bank, Sla",
+"city": "Elmwood Park",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$4.0B assets"
+},
+{
+"name": "First Bank",
+"city": "Hamilton",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$4.0B assets"
+},
+{
+"name": "Sumitomo Mitsui Trust Bank (U.S.A.) Limited",
+"city": "Hoboken",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$3.8B assets"
+},
+{
+"name": "The Bank Of East Asia Ltd.",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$3.8B assets"
+},
+{
+"name": "Capital Bank, National Association",
+"city": "Rockville",
+"state": "MD",
+"type": "Bank",
+"ownership": "$3.8B assets"
+},
+{
+"name": "Colony Bank",
+"city": "Fitzgerald",
+"state": "GA",
+"type": "Bank",
+"ownership": "$3.7B assets"
+},
+{
+"name": "First Community Bank",
+"city": "Bluefield",
+"state": "VA",
+"type": "Bank",
+"ownership": "$3.6B assets"
+},
+{
+"name": "Manasquan Bank",
+"city": "Manasquan",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$3.5B assets"
+},
+{
+"name": "First Carolina Bank",
+"city": "Rocky Mount",
+"state": "NC",
+"type": "Bank",
+"ownership": "$3.4B assets"
+},
+{
+"name": "Banco Do Brasil Americas",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$3.4B assets"
+},
+{
+"name": "Bankwell Bank",
+"city": "New Canaan",
+"state": "CT",
+"type": "Bank",
+"ownership": "$3.4B assets"
+},
+{
+"name": "Union Savings Bank",
+"city": "Danbury",
+"state": "CT",
+"type": "Bank",
+"ownership": "$3.3B assets"
+},
+{
+"name": "Ponce Bank, National Association",
+"city": "Bronx",
+"state": "NY",
+"type": "Bank",
+"ownership": "$3.3B assets"
+},
+{
+"name": "Trunorth Bank",
+"city": "Peabody",
+"state": "MA",
+"type": "Bank",
+"ownership": "$3.3B assets"
+},
+{
+"name": "Bcb Community Bank",
+"city": "Bayonne",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$3.3B assets"
+},
+{
+"name": "Northern Bank & Trust Company",
+"city": "Woburn",
+"state": "MA",
+"type": "Bank",
+"ownership": "$3.3B assets"
+},
+{
+"name": "Acnb Bank",
+"city": "Gettysburg",
+"state": "PA",
+"type": "Bank",
+"ownership": "$3.3B assets"
+},
+{
+"name": "The Bank Of Greene County",
+"city": "Catskill",
+"state": "NY",
+"type": "Bank",
+"ownership": "$3.2B assets"
+},
+{
+"name": "First National Bank",
+"city": "Damariscotta",
+"state": "ME",
+"type": "Bank",
+"ownership": "$3.2B assets"
+},
+{
+"name": "Bristol County Savings Bank",
+"city": "Taunton",
+"state": "MA",
+"type": "Bank",
+"ownership": "$3.2B assets"
+},
+{
+"name": "Citizens & Northern Bank",
+"city": "Wellsboro",
+"state": "PA",
+"type": "Bank",
+"ownership": "$3.2B assets"
+},
+{
+"name": "Banknewport",
+"city": "Middletown",
+"state": "RI",
+"type": "Bank",
+"ownership": "$3.1B assets"
+},
+{
+"name": "The Bank Of Tampa",
+"city": "Tampa",
+"state": "FL",
+"type": "Bank",
+"ownership": "$3.1B assets"
+},
+{
+"name": "Centreville Bank",
+"city": "West Warwick",
+"state": "RI",
+"type": "Bank",
+"ownership": "$3.1B assets"
+},
+{
+"name": "First Citizens Community Bank",
+"city": "Mansfield",
+"state": "PA",
+"type": "Bank",
+"ownership": "$3.0B assets"
+},
+{
+"name": "Penn Community Bank",
+"city": "Doylestown",
+"state": "PA",
+"type": "Bank",
+"ownership": "$3.0B assets"
+},
+{
+"name": "Unity Bank",
+"city": "Clinton",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$3.0B assets"
+},
+{
+"name": "Mascoma Bank",
+"city": "Lebanon",
+"state": "NH",
+"type": "Bank",
+"ownership": "$3.0B assets"
+},
+{
+"name": "Habib American Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$3.0B assets"
+},
+{
+"name": "Unibank For Savings",
+"city": "Whitinsville",
+"state": "MA",
+"type": "Bank",
+"ownership": "$2.9B assets"
+},
+{
+"name": "Wayne Bank",
+"city": "Honesdale",
+"state": "PA",
+"type": "Bank",
+"ownership": "$2.9B assets"
+},
+{
+"name": "Maine Community Bank",
+"city": "Portland",
+"state": "ME",
+"type": "Bank",
+"ownership": "$2.9B assets"
+},
+{
+"name": "Baycoast Bank",
+"city": "Swansea",
+"state": "MA",
+"type": "Bank",
+"ownership": "$2.9B assets"
+},
+{
+"name": "Amboy Bank",
+"city": "Old Bridge",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$2.9B assets"
+},
+{
+"name": "Industrial And Commercial Bank Of China Usa, National Association",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$2.9B assets"
+},
+{
+"name": "The Fidelity Deposit And Discount Bank",
+"city": "Dunmore",
+"state": "PA",
+"type": "Bank",
+"ownership": "$2.9B assets"
+},
+{
+"name": "Nextier Bank, National Association",
+"city": "Kittanning",
+"state": "PA",
+"type": "Bank",
+"ownership": "$2.9B assets"
+},
+{
+"name": "U. S. Century Bank",
+"city": "Doral",
+"state": "FL",
+"type": "Bank",
+"ownership": "$2.8B assets"
+},
+{
+"name": "Bank Of New Hampshire",
+"city": "Laconia",
+"state": "NH",
+"type": "Bank",
+"ownership": "$2.8B assets"
+},
+{
+"name": "Avidia Bank",
+"city": "Hudson",
+"state": "MA",
+"type": "Bank",
+"ownership": "$2.8B assets"
+},
+{
+"name": "Citizens And Farmers Bank",
+"city": "West Point",
+"state": "VA",
+"type": "Bank",
+"ownership": "$2.8B assets"
+},
+{
+"name": "Ion Bank",
+"city": "Naugatuck",
+"state": "CT",
+"type": "Bank",
+"ownership": "$2.8B assets"
+},
+{
+"name": "Westfield Bank",
+"city": "Westfield",
+"state": "MA",
+"type": "Bank",
+"ownership": "$2.8B assets"
+},
+{
+"name": "Chemung Canal Trust Company",
+"city": "Elmira",
+"state": "NY",
+"type": "Bank",
+"ownership": "$2.7B assets"
+},
+{
+"name": "Orange Bank & Trust Company",
+"city": "Middletown",
+"state": "NY",
+"type": "Bank",
+"ownership": "$2.7B assets"
+},
+{
+"name": "Georgia Banking Company",
+"city": "Atlanta",
+"state": "GA",
+"type": "Bank",
+"ownership": "$2.7B assets"
+},
+{
+"name": "Interaudi Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$2.7B assets"
+},
+{
+"name": "Machias Savings Bank",
+"city": "Machias",
+"state": "ME",
+"type": "Bank",
+"ownership": "$2.6B assets"
+},
+{
+"name": "Dedham Institution For Savings",
+"city": "Dedham",
+"state": "MA",
+"type": "Bank",
+"ownership": "$2.6B assets"
+},
+{
+"name": "Meridian Bank",
+"city": "Wayne",
+"state": "PA",
+"type": "Bank",
+"ownership": "$2.6B assets"
+},
+{
+"name": "South Shore Bank",
+"city": "South Weymouth",
+"state": "MA",
+"type": "Bank",
+"ownership": "$2.6B assets"
+},
+{
+"name": "Somerset Trust Company",
+"city": "Somerset",
+"state": "PA",
+"type": "Bank",
+"ownership": "$2.5B assets"
+},
+{
+"name": "Cogent Bank",
+"city": "Orlando",
+"state": "FL",
+"type": "Bank",
+"ownership": "$2.4B assets"
+},
+{
+"name": "The Ephrata National Bank",
+"city": "Ephrata",
+"state": "PA",
+"type": "Bank",
+"ownership": "$2.4B assets"
+},
+{
+"name": "Esquire Bank, National Association",
+"city": "Jericho",
+"state": "NY",
+"type": "Bank",
+"ownership": "$2.4B assets"
+},
+{
+"name": "First Community Bank",
+"city": "Lexington",
+"state": "SC",
+"type": "Bank",
+"ownership": "$2.4B assets"
+},
+{
+"name": "Cornerstone Bank",
+"city": "Spencer",
+"state": "MA",
+"type": "Bank",
+"ownership": "$2.4B assets"
+},
+{
+"name": "Blue Ridge Bank,  National Association",
+"city": "Martinsville",
+"state": "VA",
+"type": "Bank",
+"ownership": "$2.4B assets"
+},
+{
+"name": "Hanover Community Bank",
+"city": "Garden City Park",
+"state": "NY",
+"type": "Bank",
+"ownership": "$2.4B assets"
+},
+{
+"name": "Crews Bank & Trust",
+"city": "Wauchula",
+"state": "FL",
+"type": "Bank",
+"ownership": "$2.4B assets"
+},
+{
+"name": "First County Bank",
+"city": "Stamford",
+"state": "CT",
+"type": "Bank",
+"ownership": "$2.4B assets"
+},
+{
+"name": "John Marshall Bank",
+"city": "Reston",
+"state": "VA",
+"type": "Bank",
+"ownership": "$2.3B assets"
+},
+{
+"name": "Coastal States Bank",
+"city": "Hilton Head Island",
+"state": "SC",
+"type": "Bank",
+"ownership": "$2.3B assets"
+},
+{
+"name": "Vallant Bank",
+"city": "Elberton",
+"state": "GA",
+"type": "Bank",
+"ownership": "$2.3B assets"
+},
+{
+"name": "Queensborough National Bank & Trust Company",
+"city": "Louisville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$2.3B assets"
+},
+{
+"name": "Fvcbank",
+"city": "Fairfax",
+"state": "VA",
+"type": "Bank",
+"ownership": "$2.3B assets"
+},
+{
+"name": "Farmers And Merchants Trust Company Of Chambersburg",
+"city": "Chambersburg",
+"state": "PA",
+"type": "Bank",
+"ownership": "$2.3B assets"
+},
+{
+"name": "Anderson Brothers Bank",
+"city": "Mullins",
+"state": "SC",
+"type": "Bank",
+"ownership": "$2.3B assets"
+},
+{
+"name": "The Bank Of Princeton",
+"city": "Princeton",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$2.3B assets"
+},
+{
+"name": "Maspeth Federal Savings And Loan Association",
+"city": "Maspeth",
+"state": "NY",
+"type": "Bank",
+"ownership": "$2.2B assets"
+},
+{
+"name": "Country Bank For Savings",
+"city": "Ware",
+"state": "MA",
+"type": "Bank",
+"ownership": "$2.2B assets"
+},
+{
+"name": "Mainstreet Bank",
+"city": "Fairfax",
+"state": "VA",
+"type": "Bank",
+"ownership": "$2.2B assets"
+},
+{
+"name": "United Bank",
+"city": "Zebulon",
+"state": "GA",
+"type": "Bank",
+"ownership": "$2.2B assets"
+},
+{
+"name": "Pioneer Bank, National Association",
+"city": "Albany",
+"state": "NY",
+"type": "Bank",
+"ownership": "$2.2B assets"
+},
+{
+"name": "Parke Bank",
+"city": "Sewell",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$2.2B assets"
+},
+{
+"name": "Newtek Bank, National Association",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$2.2B assets"
+},
+{
+"name": "Blue Foundry Bank",
+"city": "Rutherford",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$2.1B assets"
+},
+{
+"name": "One Florida Bank",
+"city": "Orlando",
+"state": "FL",
+"type": "Bank",
+"ownership": "$2.1B assets"
+},
+{
+"name": "The Lyons National Bank",
+"city": "Lyons",
+"state": "NY",
+"type": "Bank",
+"ownership": "$2.1B assets"
+},
+{
+"name": "Kennebunk Savings Bank",
+"city": "Kennebunk",
+"state": "ME",
+"type": "Bank",
+"ownership": "$2.1B assets"
+},
+{
+"name": "Thomasville National Bank",
+"city": "Thomasville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$2.1B assets"
+},
+{
+"name": "Norway Savings Bank",
+"city": "Norway",
+"state": "ME",
+"type": "Bank",
+"ownership": "$2.1B assets"
+},
+{
+"name": "First Bank",
+"city": "Strasburg",
+"state": "VA",
+"type": "Bank",
+"ownership": "$2.1B assets"
+},
+{
+"name": "The Village Bank",
+"city": "Newton",
+"state": "MA",
+"type": "Bank",
+"ownership": "$2.0B assets"
+},
+{
+"name": "Pibank, National Association",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$2.0B assets"
+},
+{
+"name": "Northeast Community Bank",
+"city": "White Plains",
+"state": "NY",
+"type": "Bank",
+"ownership": "$2.0B assets"
+},
+{
+"name": "Florence Bank",
+"city": "Florence",
+"state": "MA",
+"type": "Bank",
+"ownership": "$2.0B assets"
+},
+{
+"name": "First United Bank & Trust",
+"city": "Oakland",
+"state": "MD",
+"type": "Bank",
+"ownership": "$2.0B assets"
+},
+{
+"name": "Bankesb",
+"city": "Easthampton",
+"state": "MA",
+"type": "Bank",
+"ownership": "$2.0B assets"
+},
+{
+"name": "Kish Bank",
+"city": "Belleville",
+"state": "PA",
+"type": "Bank",
+"ownership": "$2.0B assets"
+},
+{
+"name": "Shinhan Bank America",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$2.0B assets"
+},
+{
+"name": "The Conway National Bank",
+"city": "Conway",
+"state": "SC",
+"type": "Bank",
+"ownership": "$1.9B assets"
+},
+{
+"name": "South Atlantic Bank",
+"city": "Myrtle Beach",
+"state": "SC",
+"type": "Bank",
+"ownership": "$1.9B assets"
+},
+{
+"name": "Newtown Savings Bank",
+"city": "Newtown",
+"state": "CT",
+"type": "Bank",
+"ownership": "$1.9B assets"
+},
+{
+"name": "Chain Bridge Bank, National Association",
+"city": "Mclean",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.9B assets"
+},
+{
+"name": "Thomaston Savings Bank",
+"city": "Thomaston",
+"state": "CT",
+"type": "Bank",
+"ownership": "$1.9B assets"
+},
+{
+"name": "Qnb Bank",
+"city": "Quakertown",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.9B assets"
+},
+{
+"name": "Fall River Five Cents Savings Bank",
+"city": "Fall River",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.9B assets"
+},
+{
+"name": "Fairfield County Bank",
+"city": "Ridgefield",
+"state": "CT",
+"type": "Bank",
+"ownership": "$1.9B assets"
+},
+{
+"name": "The Lowell Five Cent Savings Bank",
+"city": "Tewksbury",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.9B assets"
+},
+{
+"name": "Bank Of New England",
+"city": "Salem",
+"state": "NH",
+"type": "Bank",
+"ownership": "$1.8B assets"
+},
+{
+"name": "Embassy Bank For The Lehigh Valley",
+"city": "Bethlehem",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.8B assets"
+},
+{
+"name": "Bank Of Clarke",
+"city": "Berryville",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.8B assets"
+},
+{
+"name": "Bank Of Bird-In-Hand",
+"city": "Bird In Hand",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.8B assets"
+},
+{
+"name": "North Easton Savings Bank",
+"city": "South Easton",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.8B assets"
+},
+{
+"name": "Kennebec Savings Bank",
+"city": "Augusta",
+"state": "ME",
+"type": "Bank",
+"ownership": "$1.8B assets"
+},
+{
+"name": "The National Bank Of Blacksburg",
+"city": "Blacksburg",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.8B assets"
+},
+{
+"name": "First Commerce Bank",
+"city": "Lakewood",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$1.8B assets"
+},
+{
+"name": "Bessemer Trust Company",
+"city": "Woodbridge",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$1.8B assets"
+},
+{
+"name": "Androscoggin Savings Bank",
+"city": "Lewiston",
+"state": "ME",
+"type": "Bank",
+"ownership": "$1.8B assets"
+},
+{
+"name": "The Adirondack Trust Company",
+"city": "Saratoga Springs",
+"state": "NY",
+"type": "Bank",
+"ownership": "$1.8B assets"
+},
+{
+"name": "Climate First Bank",
+"city": "Saint Petersburg",
+"state": "FL",
+"type": "Bank",
+"ownership": "$1.8B assets"
+},
+{
+"name": "Chelsea Groton Bank",
+"city": "Groton",
+"state": "CT",
+"type": "Bank",
+"ownership": "$1.7B assets"
+},
+{
+"name": "Peoples Bank",
+"city": "Newton",
+"state": "NC",
+"type": "Bank",
+"ownership": "$1.7B assets"
+},
+{
+"name": "Chesapeake Bank",
+"city": "Kilmarnock",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.7B assets"
+},
+{
+"name": "Journey Bank",
+"city": "Bloomsburg",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.7B assets"
+},
+{
+"name": "Ives Bank",
+"city": "Danbury",
+"state": "CT",
+"type": "Bank",
+"ownership": "$1.7B assets"
+},
+{
+"name": "Cape & Coast Bank",
+"city": "Yarmouth Port",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.7B assets"
+},
+{
+"name": "East Cambridge Savings Bank",
+"city": "Cambridge",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.7B assets"
+},
+{
+"name": "Everett Co-Operative Bank",
+"city": "Everett",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Virginia National Bank",
+"city": "Charlottesville",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Bluestone Bank",
+"city": "Raynham",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Union Bank",
+"city": "Morrisville",
+"state": "VT",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Meredith Village Savings Bank",
+"city": "Meredith",
+"state": "NH",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Old Dominion National Bank",
+"city": "Charlottesville",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Bankhometown",
+"city": "Oxford",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Banksouth",
+"city": "Greensboro",
+"state": "GA",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Main Street Bank",
+"city": "Marlborough",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Bank Of Travelers Rest",
+"city": "Travelers Rest",
+"state": "SC",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Community Bank",
+"city": "Carmichaels",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Newburyport Five Cents Savings Bank",
+"city": "Newburyport",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Northfield Savings Bank",
+"city": "Northfield",
+"state": "VT",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "International Finance Bank",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Security Federal Bank",
+"city": "Aiken",
+"state": "SC",
+"type": "Bank",
+"ownership": "$1.6B assets"
+},
+{
+"name": "Alma Bank",
+"city": "Astoria",
+"state": "NY",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Primesouth Bank",
+"city": "Blackshear",
+"state": "GA",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Grasshopper Bank, N.A.",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "First Keystone Community Bank",
+"city": "Berwick",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Pacific National Bank",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "1St Summit Bank",
+"city": "Johnstown",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Bath Savings Institution",
+"city": "Bath",
+"state": "ME",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Greenfield Savings Bank",
+"city": "Greenfield",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Union County Savings Bank",
+"city": "Elizabeth",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Citizens Bank And Trust",
+"city": "Frostproof",
+"state": "FL",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Ascend Bank",
+"city": "Guilford",
+"state": "CT",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Ameriserv Financial Bank",
+"city": "Johnstown",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Providence Bank",
+"city": "Rocky Mount",
+"state": "NC",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "North State Bank",
+"city": "Raleigh",
+"state": "NC",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Saco & Biddeford Savings Institution",
+"city": "Saco",
+"state": "ME",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Washington Financial Bank",
+"city": "Washington",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.5B assets"
+},
+{
+"name": "Bank Of Utica",
+"city": "Utica",
+"state": "NY",
+"type": "Bank",
+"ownership": "$1.4B assets"
+},
+{
+"name": "Watertown Savings Bank",
+"city": "Watertown",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.4B assets"
+},
+{
+"name": "City First Bank, National Association",
+"city": "Washington",
+"state": "DC",
+"type": "Bank",
+"ownership": "$1.4B assets"
+},
+{
+"name": "Pathfinder Bank",
+"city": "Oswego",
+"state": "NY",
+"type": "Bank",
+"ownership": "$1.4B assets"
+},
+{
+"name": "Greene County Commercial Bank",
+"city": "Catskill",
+"state": "NY",
+"type": "Bank",
+"ownership": "$1.4B assets"
+},
+{
+"name": "Marquette Savings Bank",
+"city": "Erie",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.4B assets"
+},
+{
+"name": "Grove Bank & Trust",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$1.4B assets"
+},
+{
+"name": "Farmers & Merchants Bank",
+"city": "Timberville",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.4B assets"
+},
+{
+"name": "Benchmark Community Bank",
+"city": "Kenbridge",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.4B assets"
+},
+{
+"name": "Merrimack County Savings Bank",
+"city": "Concord",
+"state": "NH",
+"type": "Bank",
+"ownership": "$1.4B assets"
+},
+{
+"name": "Ulster Savings Bank",
+"city": "Kingston",
+"state": "NY",
+"type": "Bank",
+"ownership": "$1.4B assets"
+},
+{
+"name": "Rosedale Bank",
+"city": "Nottingham",
+"state": "MD",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Fidelity Co-Operative Bank",
+"city": "Leominster",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Genesee Regional Bank",
+"city": "Rochester",
+"state": "NY",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Webster Five Cents Savings Bank",
+"city": "Webster",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Skyline National Bank",
+"city": "Independence",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Piedmont Federal Savings Bank",
+"city": "Winston Salem",
+"state": "NC",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Martha's Vineyard Bank",
+"city": "Edgartown",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Rhinebeck Bank",
+"city": "Rhinebeck",
+"state": "NY",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Coastal Carolina National Bank",
+"city": "Myrtle Beach",
+"state": "SC",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Optimumbank",
+"city": "Fort Lauderdale",
+"state": "FL",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Central Penn Bank & Trust",
+"city": "Mifflinburg",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Mutualone Bank",
+"city": "Framingham",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Bank Of Central Florida",
+"city": "Lakeland",
+"state": "FL",
+"type": "Bank",
+"ownership": "$1.3B assets"
+},
+{
+"name": "Uwharrie Bank",
+"city": "Albemarle",
+"state": "NC",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "First Capital Bank",
+"city": "Charleston",
+"state": "SC",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "Community National Bank",
+"city": "Derby",
+"state": "VT",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "Northwest Community Bank",
+"city": "Winsted",
+"state": "CT",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "Dime Bank",
+"city": "Norwich",
+"state": "CT",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "Peoplessouth Bank",
+"city": "Colquitt",
+"state": "GA",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "Bayfirst National Bank",
+"city": "Saint Petersburg",
+"state": "FL",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "Solvay Bank",
+"city": "Solvay",
+"state": "NY",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "First State Bank",
+"city": "Key West",
+"state": "FL",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "Patriot Bank, National Association",
+"city": "Stamford",
+"state": "CT",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "Reading Co-Operative Bank",
+"city": "Reading",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "Trustar Bank",
+"city": "Great Falls",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "The Citizens Bank",
+"city": "Olanta",
+"state": "SC",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "Helm Bank Usa",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "First National Bank And Trust Company Of Newtown",
+"city": "Newtown",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "Middletown Valley Bank",
+"city": "Middletown",
+"state": "MD",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "The Honesdale National Bank",
+"city": "Honesdale",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.2B assets"
+},
+{
+"name": "The Dime Bank",
+"city": "Honesdale",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "Somerset Regal Bank",
+"city": "Bound Brook",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "First Reliance Bank",
+"city": "Florence",
+"state": "SC",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "Sturdy Savings Bank",
+"city": "Stone Harbor",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "Katahdin Trust Company",
+"city": "Patten",
+"state": "ME",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "Pentucket  Bank",
+"city": "Haverhill",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "First National Bank",
+"city": "Altavista",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "American Bank",
+"city": "Allentown",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "First Palmetto Bank",
+"city": "Camden",
+"state": "SC",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "Partners Bank Of New England",
+"city": "Sanford",
+"state": "ME",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "Mountainone Bank",
+"city": "North Adams",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "Magyar Bank",
+"city": "New Brunswick",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "Onelocal Bank",
+"city": "Norwood",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "Cape Ann Savings Bank",
+"city": "Gloucester",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "Bank Of The James",
+"city": "Lynchburg",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "The Freedom Bank Of Virginia",
+"city": "Fairfax",
+"state": "VA",
+"type": "Bank",
+"ownership": "$1.1B assets"
+},
+{
+"name": "Winchester Savings Bank",
+"city": "Winchester",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.0B assets"
+},
+{
+"name": "Ledyard National Bank",
+"city": "Norwich",
+"state": "VT",
+"type": "Bank",
+"ownership": "$1.0B assets"
+},
+{
+"name": "Brentwood Bank",
+"city": "Bethel Park",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.0B assets"
+},
+{
+"name": "Sanibel Captiva Community Bank",
+"city": "Sanibel",
+"state": "FL",
+"type": "Bank",
+"ownership": "$1.0B assets"
+},
+{
+"name": "First Federal Savings And Loan Association Of Greene Co",
+"city": "Waynesburg",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.0B assets"
+},
+{
+"name": "Amerasia Bank",
+"city": "Flushing",
+"state": "NY",
+"type": "Bank",
+"ownership": "$1.0B assets"
+},
+{
+"name": "Adams Community Bank",
+"city": "Adams",
+"state": "MA",
+"type": "Bank",
+"ownership": "$1.0B assets"
+},
+{
+"name": "Presidential Bank, Fsb",
+"city": "Bethesda",
+"state": "MD",
+"type": "Bank",
+"ownership": "$1.0B assets"
+},
+{
+"name": "Brannen Bank",
+"city": "Inverness",
+"state": "FL",
+"type": "Bank",
+"ownership": "$1.0B assets"
+},
+{
+"name": "Haven Savings Bank",
+"city": "Hoboken",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$1.0B assets"
+},
+{
+"name": "Adirondack Bank",
+"city": "Utica",
+"state": "NY",
+"type": "Bank",
+"ownership": "$1.0B assets"
+},
+{
+"name": "Jonestown Bank And Trust Company, Of Jonestown, Pennsylvania",
+"city": "Jonestown",
+"state": "PA",
+"type": "Bank",
+"ownership": "$1.0B assets"
+},
+{
+"name": "The Torrington Savings Bank",
+"city": "Torrington",
+"state": "CT",
+"type": "Bank",
+"ownership": "$994M assets"
+},
+{
+"name": "Calvin B. Taylor Banking Company Of Berlin, Maryland",
+"city": "Berlin",
+"state": "MD",
+"type": "Bank",
+"ownership": "$993M assets"
+},
+{
+"name": "Farmers & Merchants Bank",
+"city": "Granite Quarry",
+"state": "NC",
+"type": "Bank",
+"ownership": "$986M assets"
+},
+{
+"name": "Coastal Heritage Bank",
+"city": "Weymouth",
+"state": "MA",
+"type": "Bank",
+"ownership": "$985M assets"
+},
+{
+"name": "Walden Savings Bank",
+"city": "Montgomery",
+"state": "NY",
+"type": "Bank",
+"ownership": "$977M assets"
+},
+{
+"name": "Beacon Community Bank",
+"city": "Mount Pleasant",
+"state": "SC",
+"type": "Bank",
+"ownership": "$972M assets"
+},
+{
+"name": "Watertown Savings Bank",
+"city": "Watertown",
+"state": "NY",
+"type": "Bank",
+"ownership": "$970M assets"
+},
+{
+"name": "First Central Savings Bank",
+"city": "Glen Cove",
+"state": "NY",
+"type": "Bank",
+"ownership": "$960M assets"
+},
+{
+"name": "Harleysville Bank",
+"city": "Harleysville",
+"state": "PA",
+"type": "Bank",
+"ownership": "$958M assets"
+},
+{
+"name": "Prime Meridian Bank",
+"city": "Tallahassee",
+"state": "FL",
+"type": "Bank",
+"ownership": "$956M assets"
+},
+{
+"name": "Mainstreet Community Bank Of Florida",
+"city": "Deland",
+"state": "FL",
+"type": "Bank",
+"ownership": "$948M assets"
+},
+{
+"name": "Fieldpoint Private Bank & Trust",
+"city": "Greenwich",
+"state": "CT",
+"type": "Bank",
+"ownership": "$944M assets"
+},
+{
+"name": "Ballston Spa National Bank",
+"city": "Ballston Spa",
+"state": "NY",
+"type": "Bank",
+"ownership": "$942M assets"
+},
+{
+"name": "New Peoples Bank, Inc.",
+"city": "Honaker",
+"state": "VA",
+"type": "Bank",
+"ownership": "$940M assets"
+},
+{
+"name": "Bank Of Botetourt",
+"city": "Buchanan",
+"state": "VA",
+"type": "Bank",
+"ownership": "$938M assets"
+},
+{
+"name": "Winchester Co-Operative Bank",
+"city": "Winchester",
+"state": "MA",
+"type": "Bank",
+"ownership": "$932M assets"
+},
+{
+"name": "First Northern Bank And Trust Company",
+"city": "Palmerton",
+"state": "PA",
+"type": "Bank",
+"ownership": "$930M assets"
+},
+{
+"name": "Passumpsic Savings Bank",
+"city": "Saint Johnsbury",
+"state": "VT",
+"type": "Bank",
+"ownership": "$925M assets"
+},
+{
+"name": "New Millennium Bank",
+"city": "Fort Lee",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$925M assets"
+},
+{
+"name": "Oak View National Bank",
+"city": "Warrenton",
+"state": "VA",
+"type": "Bank",
+"ownership": "$925M assets"
+},
+{
+"name": "Affinity Bank, National Association",
+"city": "Covington",
+"state": "GA",
+"type": "Bank",
+"ownership": "$924M assets"
+},
+{
+"name": "Atlantic Community Bankers Bank",
+"city": "Camp Hill",
+"state": "PA",
+"type": "Bank",
+"ownership": "$923M assets"
+},
+{
+"name": "Franklin Savings Bank",
+"city": "Franklin",
+"state": "NH",
+"type": "Bank",
+"ownership": "$908M assets"
+},
+{
+"name": "Stonehambank,  A Co-Operative Bank",
+"city": "Stoneham",
+"state": "MA",
+"type": "Bank",
+"ownership": "$903M assets"
+},
+{
+"name": "Bayvanguard Bank",
+"city": "Baltimore",
+"state": "MD",
+"type": "Bank",
+"ownership": "$902M assets"
+},
+{
+"name": "The Juniata Valley Bank",
+"city": "Mifflintown",
+"state": "PA",
+"type": "Bank",
+"ownership": "$901M assets"
+},
+{
+"name": "Btg Pactual Bank, National Association",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$892M assets"
+},
+{
+"name": "First American Bank And Trust Company",
+"city": "Athens",
+"state": "GA",
+"type": "Bank",
+"ownership": "$890M assets"
+},
+{
+"name": "Newfield National Bank",
+"city": "Newfield",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$887M assets"
+},
+{
+"name": "Windsor Federal Bank",
+"city": "Windsor",
+"state": "CT",
+"type": "Bank",
+"ownership": "$882M assets"
+},
+{
+"name": "Mechanics Cooperative Bank",
+"city": "Taunton",
+"state": "MA",
+"type": "Bank",
+"ownership": "$879M assets"
+},
+{
+"name": "Bogota Savings Bank",
+"city": "Teaneck",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$875M assets"
+},
+{
+"name": "Ks Bank, Inc.",
+"city": "Smithfield",
+"state": "NC",
+"type": "Bank",
+"ownership": "$873M assets"
+},
+{
+"name": "Terrabank, National Association",
+"city": "Coral Gables",
+"state": "FL",
+"type": "Bank",
+"ownership": "$869M assets"
+},
+{
+"name": "Cenlar Fsb",
+"city": "Ewing",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$865M assets"
+},
+{
+"name": "The Savings Bank",
+"city": "Wakefield",
+"state": "MA",
+"type": "Bank",
+"ownership": "$864M assets"
+},
+{
+"name": "Farmers And Merchants Bank",
+"city": "Upperco",
+"state": "MD",
+"type": "Bank",
+"ownership": "$863M assets"
+},
+{
+"name": "First Century Bank, National Association",
+"city": "Commerce",
+"state": "GA",
+"type": "Bank",
+"ownership": "$862M assets"
+},
+{
+"name": "Dr Bank",
+"city": "Darien",
+"state": "CT",
+"type": "Bank",
+"ownership": "$861M assets"
+},
+{
+"name": "Greenfield Co-Operative Bank",
+"city": "Greenfield",
+"state": "MA",
+"type": "Bank",
+"ownership": "$858M assets"
+},
+{
+"name": "Freedom Bank",
+"city": "Maywood",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$856M assets"
+},
+{
+"name": "Quontic Bank",
+"city": "Astoria",
+"state": "NY",
+"type": "Bank",
+"ownership": "$853M assets"
+},
+{
+"name": "Savings Bank Of Walpole",
+"city": "Walpole",
+"state": "NH",
+"type": "Bank",
+"ownership": "$849M assets"
+},
+{
+"name": "Community Federal Savings Bank",
+"city": "Woodhaven",
+"state": "NY",
+"type": "Bank",
+"ownership": "$849M assets"
+},
+{
+"name": "Skowhegan Savings Bank",
+"city": "Skowhegan",
+"state": "ME",
+"type": "Bank",
+"ownership": "$843M assets"
+},
+{
+"name": "United Southern Bank",
+"city": "Umatilla",
+"state": "FL",
+"type": "Bank",
+"ownership": "$843M assets"
+},
+{
+"name": "Promiseone Bank",
+"city": "Duluth",
+"state": "GA",
+"type": "Bank",
+"ownership": "$840M assets"
+},
+{
+"name": "Hana Bank Usa, National Association",
+"city": "Fort Lee",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$840M assets"
+},
+{
+"name": "Rollstone Bank & Trust",
+"city": "Fitchburg",
+"state": "MA",
+"type": "Bank",
+"ownership": "$836M assets"
+},
+{
+"name": "Carolina Bank & Trust Co.",
+"city": "Lamar",
+"state": "SC",
+"type": "Bank",
+"ownership": "$831M assets"
+},
+{
+"name": "Arthur State Bank",
+"city": "Union",
+"state": "SC",
+"type": "Bank",
+"ownership": "$826M assets"
+},
+{
+"name": "First Bank",
+"city": "Clewiston",
+"state": "FL",
+"type": "Bank",
+"ownership": "$823M assets"
+},
+{
+"name": "Hebron Savings Bank",
+"city": "Hebron",
+"state": "MD",
+"type": "Bank",
+"ownership": "$822M assets"
+},
+{
+"name": "Monson Savings Bank",
+"city": "Monson",
+"state": "MA",
+"type": "Bank",
+"ownership": "$814M assets"
+},
+{
+"name": "First Resource Bank",
+"city": "Exton",
+"state": "PA",
+"type": "Bank",
+"ownership": "$811M assets"
+},
+{
+"name": "American Pride Bank",
+"city": "Macon",
+"state": "GA",
+"type": "Bank",
+"ownership": "$811M assets"
+},
+{
+"name": "The First Bank Of Greenwich",
+"city": "Cos Cob",
+"state": "CT",
+"type": "Bank",
+"ownership": "$807M assets"
+},
+{
+"name": "Farmers And Merchants Bank",
+"city": "Lakeland",
+"state": "GA",
+"type": "Bank",
+"ownership": "$801M assets"
+},
+{
+"name": "Savers Co-Operative Bank",
+"city": "Southbridge",
+"state": "MA",
+"type": "Bank",
+"ownership": "$798M assets"
+},
+{
+"name": "The Bank Of Canton",
+"city": "Canton",
+"state": "MA",
+"type": "Bank",
+"ownership": "$793M assets"
+},
+{
+"name": "Peach State Bank & Trust",
+"city": "Gainesville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$789M assets"
+},
+{
+"name": "Citizens Trust Bank",
+"city": "Atlanta",
+"state": "GA",
+"type": "Bank",
+"ownership": "$787M assets"
+},
+{
+"name": "Optus Bank",
+"city": "Columbia",
+"state": "SC",
+"type": "Bank",
+"ownership": "$785M assets"
+},
+{
+"name": "Barwick Banking Company",
+"city": "Barwick",
+"state": "GA",
+"type": "Bank",
+"ownership": "$779M assets"
+},
+{
+"name": "Industrial Bank",
+"city": "Washington",
+"state": "DC",
+"type": "Bank",
+"ownership": "$775M assets"
+},
+{
+"name": "Axiom Bank, National Association",
+"city": "Maitland",
+"state": "FL",
+"type": "Bank",
+"ownership": "$774M assets"
+},
+{
+"name": "Franklin Savings Bank",
+"city": "Farmington",
+"state": "ME",
+"type": "Bank",
+"ownership": "$765M assets"
+},
+{
+"name": "Flagship Bank",
+"city": "Clearwater",
+"state": "FL",
+"type": "Bank",
+"ownership": "$762M assets"
+},
+{
+"name": "Wilmington Trust, National Association",
+"city": "Wilmington",
+"state": "DE",
+"type": "Bank",
+"ownership": "$760M assets"
+},
+{
+"name": "Cfsbank",
+"city": "Charleroi",
+"state": "PA",
+"type": "Bank",
+"ownership": "$752M assets"
+},
+{
+"name": "Countybank",
+"city": "Greenwood",
+"state": "SC",
+"type": "Bank",
+"ownership": "$748M assets"
+},
+{
+"name": "Primary Bank",
+"city": "Bedford",
+"state": "NH",
+"type": "Bank",
+"ownership": "$743M assets"
+},
+{
+"name": "The National Capital Bank Of Washington",
+"city": "Washington",
+"state": "DC",
+"type": "Bank",
+"ownership": "$735M assets"
+},
+{
+"name": "Harford Bank",
+"city": "Aberdeen",
+"state": "MD",
+"type": "Bank",
+"ownership": "$732M assets"
+},
+{
+"name": "The Queenstown Bank Of Maryland",
+"city": "Queenstown",
+"state": "MD",
+"type": "Bank",
+"ownership": "$730M assets"
+},
+{
+"name": "Clinton Savings Bank",
+"city": "Clinton",
+"state": "MA",
+"type": "Bank",
+"ownership": "$729M assets"
+},
+{
+"name": "Oconee State Bank",
+"city": "Watkinsville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$722M assets"
+},
+{
+"name": "Lake Shore Bank",
+"city": "Dunkirk",
+"state": "NY",
+"type": "Bank",
+"ownership": "$722M assets"
+},
+{
+"name": "First National Community Bank",
+"city": "Chatsworth",
+"state": "GA",
+"type": "Bank",
+"ownership": "$721M assets"
+},
+{
+"name": "Artisans' Bank",
+"city": "Wilmington",
+"state": "DE",
+"type": "Bank",
+"ownership": "$720M assets"
+},
+{
+"name": "Fnb South",
+"city": "Alma",
+"state": "GA",
+"type": "Bank",
+"ownership": "$716M assets"
+},
+{
+"name": "Florida Capital Bank, National Association",
+"city": "Jacksonville",
+"state": "FL",
+"type": "Bank",
+"ownership": "$714M assets"
+},
+{
+"name": "First National Bank Of Scotia",
+"city": "Scotia",
+"state": "NY",
+"type": "Bank",
+"ownership": "$706M assets"
+},
+{
+"name": "Trupoint Bank",
+"city": "Grundy",
+"state": "VA",
+"type": "Bank",
+"ownership": "$703M assets"
+},
+{
+"name": "Modern Bank, National Association",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$696M assets"
+},
+{
+"name": "Asian Bank",
+"city": "Philadelphia",
+"state": "PA",
+"type": "Bank",
+"ownership": "$685M assets"
+},
+{
+"name": "County Bank",
+"city": "Rehoboth Beach",
+"state": "DE",
+"type": "Bank",
+"ownership": "$685M assets"
+},
+{
+"name": "Eagle Bank",
+"city": "Everett",
+"state": "MA",
+"type": "Bank",
+"ownership": "$680M assets"
+},
+{
+"name": "Carver Federal Savings Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$676M assets"
+},
+{
+"name": "Infirst Bank",
+"city": "Indiana",
+"state": "PA",
+"type": "Bank",
+"ownership": "$673M assets"
+},
+{
+"name": "New Tripoli Bank",
+"city": "New Tripoli",
+"state": "PA",
+"type": "Bank",
+"ownership": "$673M assets"
+},
+{
+"name": "Jeff Bank",
+"city": "Jeffersonville",
+"state": "NY",
+"type": "Bank",
+"ownership": "$672M assets"
+},
+{
+"name": "Geddes Federal Savings And Loan Association",
+"city": "Syracuse",
+"state": "NY",
+"type": "Bank",
+"ownership": "$669M assets"
+},
+{
+"name": "Oconee Federal Savings And Loan Association",
+"city": "Seneca",
+"state": "SC",
+"type": "Bank",
+"ownership": "$665M assets"
+},
+{
+"name": "First State Bank Of Blakely",
+"city": "Blakely",
+"state": "GA",
+"type": "Bank",
+"ownership": "$664M assets"
+},
+{
+"name": "Reliance Savings Bank",
+"city": "Altoona",
+"state": "PA",
+"type": "Bank",
+"ownership": "$663M assets"
+},
+{
+"name": "Ps Bank",
+"city": "Wyalusing",
+"state": "PA",
+"type": "Bank",
+"ownership": "$662M assets"
+},
+{
+"name": "Bank Of Ocean City",
+"city": "Ocean City",
+"state": "MD",
+"type": "Bank",
+"ownership": "$661M assets"
+},
+{
+"name": "Pennian Bank",
+"city": "Mifflintown",
+"state": "PA",
+"type": "Bank",
+"ownership": "$657M assets"
+},
+{
+"name": "Marine Bank & Trust Company",
+"city": "Vero Beach",
+"state": "FL",
+"type": "Bank",
+"ownership": "$657M assets"
+},
+{
+"name": "Bank Of Oak Ridge",
+"city": "Oak Ridge",
+"state": "NC",
+"type": "Bank",
+"ownership": "$655M assets"
+},
+{
+"name": "Phoenixville Federal Bank And Trust",
+"city": "Phoenixville",
+"state": "PA",
+"type": "Bank",
+"ownership": "$654M assets"
+},
+{
+"name": "First Hope Bank, A National Banking Association",
+"city": "Hope",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$654M assets"
+},
+{
+"name": "Fnbt Bank",
+"city": "Fort Walton Beach",
+"state": "FL",
+"type": "Bank",
+"ownership": "$654M assets"
+},
+{
+"name": "The Milford Bank",
+"city": "Milford",
+"state": "CT",
+"type": "Bank",
+"ownership": "$653M assets"
+},
+{
+"name": "Northeast Georgia Bank",
+"city": "Lavonia",
+"state": "GA",
+"type": "Bank",
+"ownership": "$651M assets"
+},
+{
+"name": "The Bank Of Bennington",
+"city": "Bennington",
+"state": "VT",
+"type": "Bank",
+"ownership": "$650M assets"
+},
+{
+"name": "Walpole Co-Operative Bank",
+"city": "Walpole",
+"state": "MA",
+"type": "Bank",
+"ownership": "$649M assets"
+},
+{
+"name": "Spring Bank",
+"city": "Bronx",
+"state": "NY",
+"type": "Bank",
+"ownership": "$647M assets"
+},
+{
+"name": "Empire State Bank",
+"city": "Staten Island",
+"state": "NY",
+"type": "Bank",
+"ownership": "$644M assets"
+},
+{
+"name": "Quaint Oak Bank",
+"city": "Southampton",
+"state": "PA",
+"type": "Bank",
+"ownership": "$644M assets"
+},
+{
+"name": "Crown Bank",
+"city": "Elizabeth",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$643M assets"
+},
+{
+"name": "Middlesex Federal Savings, F.A.",
+"city": "Somerville",
+"state": "MA",
+"type": "Bank",
+"ownership": "$642M assets"
+},
+{
+"name": "Century Savings Bank",
+"city": "Vineland",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$641M assets"
+},
+{
+"name": "Tioga State Bank National Association",
+"city": "Spencer",
+"state": "NY",
+"type": "Bank",
+"ownership": "$640M assets"
+},
+{
+"name": "Community Bank Of Pickens County",
+"city": "Jasper",
+"state": "GA",
+"type": "Bank",
+"ownership": "$639M assets"
+},
+{
+"name": "Haverhill Bank",
+"city": "Haverhill",
+"state": "MA",
+"type": "Bank",
+"ownership": "$638M assets"
+},
+{
+"name": "Mauch Chunk Trust Company",
+"city": "Jim Thorpe",
+"state": "PA",
+"type": "Bank",
+"ownership": "$638M assets"
+},
+{
+"name": "Woodlands Bank",
+"city": "Williamsport",
+"state": "PA",
+"type": "Bank",
+"ownership": "$633M assets"
+},
+{
+"name": "The Bank Of Southside Virginia",
+"city": "Carson",
+"state": "VA",
+"type": "Bank",
+"ownership": "$632M assets"
+},
+{
+"name": "Blueharbor Bank",
+"city": "Mooresville",
+"state": "NC",
+"type": "Bank",
+"ownership": "$623M assets"
+},
+{
+"name": "Slovenian Savings And Loan Association Of Canonsburg",
+"city": "Strabane",
+"state": "PA",
+"type": "Bank",
+"ownership": "$623M assets"
+},
+{
+"name": "The Citizens Bank Of Georgia",
+"city": "Cumming",
+"state": "GA",
+"type": "Bank",
+"ownership": "$622M assets"
+},
+{
+"name": "Southeastern Bank",
+"city": "Darien",
+"state": "GA",
+"type": "Bank",
+"ownership": "$621M assets"
+},
+{
+"name": "Claremont Savings Bank",
+"city": "Claremont",
+"state": "NH",
+"type": "Bank",
+"ownership": "$620M assets"
+},
+{
+"name": "Palmetto State Bank",
+"city": "Hampton",
+"state": "SC",
+"type": "Bank",
+"ownership": "$619M assets"
+},
+{
+"name": "Newbank",
+"city": "Flushing",
+"state": "NY",
+"type": "Bank",
+"ownership": "$614M assets"
+},
+{
+"name": "The Bank Of Marion",
+"city": "Marion",
+"state": "VA",
+"type": "Bank",
+"ownership": "$614M assets"
+},
+{
+"name": "Oneunited Bank",
+"city": "Boston",
+"state": "MA",
+"type": "Bank",
+"ownership": "$609M assets"
+},
+{
+"name": "Anchor Bank",
+"city": "Palm Beach Gardens",
+"state": "FL",
+"type": "Bank",
+"ownership": "$607M assets"
+},
+{
+"name": "Mercer County State Bank",
+"city": "Sandy Lake",
+"state": "PA",
+"type": "Bank",
+"ownership": "$602M assets"
+},
+{
+"name": "Guardian Bank",
+"city": "Valdosta",
+"state": "GA",
+"type": "Bank",
+"ownership": "$601M assets"
+},
+{
+"name": "First Port City Bank",
+"city": "Bainbridge",
+"state": "GA",
+"type": "Bank",
+"ownership": "$601M assets"
+},
+{
+"name": "Sunrise Bank",
+"city": "Orlando",
+"state": "FL",
+"type": "Bank",
+"ownership": "$600M assets"
+},
+{
+"name": "First Piedmont Federal Savings And Loan Association Of Gaffney",
+"city": "Gaffney",
+"state": "SC",
+"type": "Bank",
+"ownership": "$591M assets"
+},
+{
+"name": "Hatboro Federal Savings, Fa",
+"city": "Hatboro",
+"state": "PA",
+"type": "Bank",
+"ownership": "$591M assets"
+},
+{
+"name": "South Georgia Banking Company",
+"city": "Omega",
+"state": "GA",
+"type": "Bank",
+"ownership": "$590M assets"
+},
+{
+"name": "First Seacoast Bank",
+"city": "Dover",
+"state": "NH",
+"type": "Bank",
+"ownership": "$589M assets"
+},
+{
+"name": "Bay State Savings Bank",
+"city": "Worcester",
+"state": "MA",
+"type": "Bank",
+"ownership": "$585M assets"
+},
+{
+"name": "Citizens Bank And Trust Company",
+"city": "Blackstone",
+"state": "VA",
+"type": "Bank",
+"ownership": "$583M assets"
+},
+{
+"name": "Peoples Bank & Trust",
+"city": "Buford",
+"state": "GA",
+"type": "Bank",
+"ownership": "$582M assets"
+},
+{
+"name": "Crest Savings Bank",
+"city": "Wildwood",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$580M assets"
+},
+{
+"name": "Lee Bank",
+"city": "Lee",
+"state": "MA",
+"type": "Bank",
+"ownership": "$579M assets"
+},
+{
+"name": "Salem Co-Operative Bank",
+"city": "Salem",
+"state": "NH",
+"type": "Bank",
+"ownership": "$570M assets"
+},
+{
+"name": "Pineland Bank",
+"city": "Alma",
+"state": "GA",
+"type": "Bank",
+"ownership": "$570M assets"
+},
+{
+"name": "Sunstate Bank",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$569M assets"
+},
+{
+"name": "Intracoastal Bank",
+"city": "Palm Coast",
+"state": "FL",
+"type": "Bank",
+"ownership": "$565M assets"
+},
+{
+"name": "The Bank Of South Carolina",
+"city": "Charleston",
+"state": "SC",
+"type": "Bank",
+"ownership": "$562M assets"
+},
+{
+"name": "Lumbee Guaranty Bank",
+"city": "Pembroke",
+"state": "NC",
+"type": "Bank",
+"ownership": "$560M assets"
+},
+{
+"name": "The National Bank Of Middlebury",
+"city": "Middlebury",
+"state": "VT",
+"type": "Bank",
+"ownership": "$555M assets"
+},
+{
+"name": "Hyperion Bank",
+"city": "Philadelphia",
+"state": "PA",
+"type": "Bank",
+"ownership": "$553M assets"
+},
+{
+"name": "First National Bank Of Coffee County",
+"city": "Douglas",
+"state": "GA",
+"type": "Bank",
+"ownership": "$552M assets"
+},
+{
+"name": "Milford Federal Bank",
+"city": "Milford",
+"state": "MA",
+"type": "Bank",
+"ownership": "$545M assets"
+},
+{
+"name": "The Cooperative Bank",
+"city": "Roslindale",
+"state": "MA",
+"type": "Bank",
+"ownership": "$543M assets"
+},
+{
+"name": "The Berkshire Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$542M assets"
+},
+{
+"name": "Sunmark Community Bank",
+"city": "Perry",
+"state": "GA",
+"type": "Bank",
+"ownership": "$539M assets"
+},
+{
+"name": "Cross County Savings Bank",
+"city": "Middle Village",
+"state": "NY",
+"type": "Bank",
+"ownership": "$538M assets"
+},
+{
+"name": "Triad Business Bank",
+"city": "Greensboro",
+"state": "NC",
+"type": "Bank",
+"ownership": "$537M assets"
+},
+{
+"name": "The Farmers Bank Of Willards",
+"city": "Willards",
+"state": "MD",
+"type": "Bank",
+"ownership": "$537M assets"
+},
+{
+"name": "Connecticut Community Bank, National Association",
+"city": "Norwalk",
+"state": "CT",
+"type": "Bank",
+"ownership": "$533M assets"
+},
+{
+"name": "Essex Bank",
+"city": "Essex",
+"state": "CT",
+"type": "Bank",
+"ownership": "$526M assets"
+},
+{
+"name": "Bank Of Dudley",
+"city": "Dudley",
+"state": "GA",
+"type": "Bank",
+"ownership": "$526M assets"
+},
+{
+"name": "Enterprise Bank Of South Carolina",
+"city": "Ehrhardt",
+"state": "SC",
+"type": "Bank",
+"ownership": "$522M assets"
+},
+{
+"name": "Shoreham Bank",
+"city": "Warwick",
+"state": "RI",
+"type": "Bank",
+"ownership": "$522M assets"
+},
+{
+"name": "Powell Valley National Bank",
+"city": "Jonesville",
+"state": "VA",
+"type": "Bank",
+"ownership": "$518M assets"
+},
+{
+"name": "Ambler Savings Bank",
+"city": "Ambler",
+"state": "PA",
+"type": "Bank",
+"ownership": "$517M assets"
+},
+{
+"name": "First State Bank",
+"city": "Wrens",
+"state": "GA",
+"type": "Bank",
+"ownership": "$514M assets"
+},
+{
+"name": "Rondout Savings Bank",
+"city": "Kingston",
+"state": "NY",
+"type": "Bank",
+"ownership": "$510M assets"
+},
+{
+"name": "Stafford Savings Bank",
+"city": "Stafford Springs",
+"state": "CT",
+"type": "Bank",
+"ownership": "$508M assets"
+},
+{
+"name": "Enterprise Bank",
+"city": "Allison Park",
+"state": "PA",
+"type": "Bank",
+"ownership": "$507M assets"
+},
+{
+"name": "Citizens Bank Of Americus",
+"city": "Americus",
+"state": "GA",
+"type": "Bank",
+"ownership": "$507M assets"
+},
+{
+"name": "Lifestore Bank",
+"city": "West Jefferson",
+"state": "NC",
+"type": "Bank",
+"ownership": "$503M assets"
+},
+{
+"name": "Select Bank",
+"city": "Forest",
+"state": "VA",
+"type": "Bank",
+"ownership": "$500M assets"
+},
+{
+"name": "Champlain National Bank",
+"city": "Elizabethtown",
+"state": "NY",
+"type": "Bank",
+"ownership": "$500M assets"
+},
+{
+"name": "Hamlin Bank And Trust Company",
+"city": "Smethport",
+"state": "PA",
+"type": "Bank",
+"ownership": "$496M assets"
+},
+{
+"name": "Dean Co-Operative Bank",
+"city": "Franklin",
+"state": "MA",
+"type": "Bank",
+"ownership": "$493M assets"
+},
+{
+"name": "Fulton Savings Bank",
+"city": "Fulton",
+"state": "NY",
+"type": "Bank",
+"ownership": "$493M assets"
+},
+{
+"name": "Century Bank And Trust",
+"city": "Milledgeville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$491M assets"
+},
+{
+"name": "Mechanics & Farmers Bank",
+"city": "Durham",
+"state": "NC",
+"type": "Bank",
+"ownership": "$489M assets"
+},
+{
+"name": "American Commerce Bank, National Association",
+"city": "Bremen",
+"state": "GA",
+"type": "Bank",
+"ownership": "$488M assets"
+},
+{
+"name": "The Bank Of East Asia Ltd.",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$488M assets"
+},
+{
+"name": "Jewett City Savings Bank",
+"city": "Jewett City",
+"state": "CT",
+"type": "Bank",
+"ownership": "$484M assets"
+},
+{
+"name": "First Federal Savings Bank Of Lincolnton",
+"city": "Lincolnton",
+"state": "NC",
+"type": "Bank",
+"ownership": "$478M assets"
+},
+{
+"name": "Edison National Bank",
+"city": "Fort Myers",
+"state": "FL",
+"type": "Bank",
+"ownership": "$477M assets"
+},
+{
+"name": "Farmers And Merchants Bank Of South Carolina",
+"city": "Holly Hill",
+"state": "SC",
+"type": "Bank",
+"ownership": "$476M assets"
+},
+{
+"name": "Wallkill Valley Federal Savings And Loan Association",
+"city": "Wallkill",
+"state": "NY",
+"type": "Bank",
+"ownership": "$476M assets"
+},
+{
+"name": "Piermont Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$474M assets"
+},
+{
+"name": "Arundel Bank",
+"city": "Glen Burnie",
+"state": "MD",
+"type": "Bank",
+"ownership": "$474M assets"
+},
+{
+"name": "Community State Bank Of Orbisonia",
+"city": "Orbisonia",
+"state": "PA",
+"type": "Bank",
+"ownership": "$472M assets"
+},
+{
+"name": "Woodsboro Bank",
+"city": "Woodsboro",
+"state": "MD",
+"type": "Bank",
+"ownership": "$470M assets"
+},
+{
+"name": "Seamen's Bank",
+"city": "Provincetown",
+"state": "MA",
+"type": "Bank",
+"ownership": "$469M assets"
+},
+{
+"name": "The Neffs National Bank",
+"city": "Neffs",
+"state": "PA",
+"type": "Bank",
+"ownership": "$467M assets"
+},
+{
+"name": "Planters First Bank",
+"city": "Cordele",
+"state": "GA",
+"type": "Bank",
+"ownership": "$466M assets"
+},
+{
+"name": "United Savings Bank",
+"city": "Philadelphia",
+"state": "PA",
+"type": "Bank",
+"ownership": "$460M assets"
+},
+{
+"name": "The Commercial Bank",
+"city": "Crawford",
+"state": "GA",
+"type": "Bank",
+"ownership": "$459M assets"
+},
+{
+"name": "The Bank Of Clarendon",
+"city": "Manning",
+"state": "SC",
+"type": "Bank",
+"ownership": "$456M assets"
+},
+{
+"name": "Hometown Bank Of Pennsylvania",
+"city": "Bedford",
+"state": "PA",
+"type": "Bank",
+"ownership": "$453M assets"
+},
+{
+"name": "Alden State Bank",
+"city": "Alden",
+"state": "NY",
+"type": "Bank",
+"ownership": "$452M assets"
+},
+{
+"name": "Elderton State Bank",
+"city": "Elderton",
+"state": "PA",
+"type": "Bank",
+"ownership": "$452M assets"
+},
+{
+"name": "The Bank Of Lafayette, Georgia",
+"city": "La Fayette",
+"state": "GA",
+"type": "Bank",
+"ownership": "$452M assets"
+},
+{
+"name": "Bank Of Madison",
+"city": "Madison",
+"state": "GA",
+"type": "Bank",
+"ownership": "$449M assets"
+},
+{
+"name": "Paradise Bank",
+"city": "Boca Raton",
+"state": "FL",
+"type": "Bank",
+"ownership": "$445M assets"
+},
+{
+"name": "The Pittsfield Co-Operative Bank",
+"city": "Pittsfield",
+"state": "MA",
+"type": "Bank",
+"ownership": "$445M assets"
+},
+{
+"name": "The Peoples Bank",
+"city": "Iva",
+"state": "SC",
+"type": "Bank",
+"ownership": "$444M assets"
+},
+{
+"name": "The National Grand Bank Of Marblehead",
+"city": "Marblehead",
+"state": "MA",
+"type": "Bank",
+"ownership": "$442M assets"
+},
+{
+"name": "Glennville Bank",
+"city": "Glennville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$442M assets"
+},
+{
+"name": "North Brookfield Savings Bank",
+"city": "North Brookfield",
+"state": "MA",
+"type": "Bank",
+"ownership": "$440M assets"
+},
+{
+"name": "Bankflorida",
+"city": "Dade City",
+"state": "FL",
+"type": "Bank",
+"ownership": "$439M assets"
+},
+{
+"name": "Ssb Bank",
+"city": "Pittsburgh",
+"state": "PA",
+"type": "Bank",
+"ownership": "$435M assets"
+},
+{
+"name": "F&M Bank",
+"city": "Washington",
+"state": "GA",
+"type": "Bank",
+"ownership": "$424M assets"
+},
+{
+"name": "Bank Of The Lowcountry",
+"city": "Walterboro",
+"state": "SC",
+"type": "Bank",
+"ownership": "$424M assets"
+},
+{
+"name": "Great Oaks Bank",
+"city": "Richmond Hill",
+"state": "GA",
+"type": "Bank",
+"ownership": "$424M assets"
+},
+{
+"name": "Waterfall Bank",
+"city": "Clearwater",
+"state": "FL",
+"type": "Bank",
+"ownership": "$422M assets"
+},
+{
+"name": "Marion Center Bank",
+"city": "Indiana",
+"state": "PA",
+"type": "Bank",
+"ownership": "$422M assets"
+},
+{
+"name": "Community Bank Delaware",
+"city": "Lewes",
+"state": "DE",
+"type": "Bank",
+"ownership": "$420M assets"
+},
+{
+"name": "The Citizens Bank Of Swainsboro",
+"city": "Swainsboro",
+"state": "GA",
+"type": "Bank",
+"ownership": "$419M assets"
+},
+{
+"name": "Winter Hill Bank, Fsb",
+"city": "Somerville",
+"state": "MA",
+"type": "Bank",
+"ownership": "$419M assets"
+},
+{
+"name": "The Bank Of Landisburg",
+"city": "Landisburg",
+"state": "PA",
+"type": "Bank",
+"ownership": "$419M assets"
+},
+{
+"name": "First Peoples Bank",
+"city": "Pine Mountain",
+"state": "GA",
+"type": "Bank",
+"ownership": "$418M assets"
+},
+{
+"name": "River City Bank",
+"city": "Rome",
+"state": "GA",
+"type": "Bank",
+"ownership": "$417M assets"
+},
+{
+"name": "Sugar River Bank",
+"city": "Newport",
+"state": "NH",
+"type": "Bank",
+"ownership": "$417M assets"
+},
+{
+"name": "Exchange Bank",
+"city": "Milledgeville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$414M assets"
+},
+{
+"name": "First Sentinel Bank",
+"city": "Richlands",
+"state": "VA",
+"type": "Bank",
+"ownership": "$413M assets"
+},
+{
+"name": "Lusitania Savings Bank",
+"city": "Newark",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$411M assets"
+},
+{
+"name": "Touchmark National Bank",
+"city": "Alpharetta",
+"state": "GA",
+"type": "Bank",
+"ownership": "$411M assets"
+},
+{
+"name": "Haddon Savings Bank",
+"city": "Haddon Heights",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$411M assets"
+},
+{
+"name": "Commercial Banking Company",
+"city": "Valdosta",
+"state": "GA",
+"type": "Bank",
+"ownership": "$409M assets"
+},
+{
+"name": "The Delaware National Bank Of Delhi",
+"city": "Delhi",
+"state": "NY",
+"type": "Bank",
+"ownership": "$408M assets"
+},
+{
+"name": "Southern Bank",
+"city": "Spartanburg",
+"state": "SC",
+"type": "Bank",
+"ownership": "$400M assets"
+},
+{
+"name": "The First National Bank Of Elmer",
+"city": "Elmer",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$400M assets"
+},
+{
+"name": "Fleetwood Bank",
+"city": "Fleetwood",
+"state": "PA",
+"type": "Bank",
+"ownership": "$399M assets"
+},
+{
+"name": "Cibc National Trust Company",
+"city": "Atlanta",
+"state": "GA",
+"type": "Bank",
+"ownership": "$398M assets"
+},
+{
+"name": "Citizens Bank Of The South",
+"city": "Sandersville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$395M assets"
+},
+{
+"name": "Tcm Bank, National Association",
+"city": "Tampa",
+"state": "FL",
+"type": "Bank",
+"ownership": "$391M assets"
+},
+{
+"name": "Central Bank",
+"city": "Tampa",
+"state": "FL",
+"type": "Bank",
+"ownership": "$390M assets"
+},
+{
+"name": "Ascendia Bank",
+"city": "Glen Rock",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$388M assets"
+},
+{
+"name": "Georgia Community Bank",
+"city": "Albany",
+"state": "GA",
+"type": "Bank",
+"ownership": "$385M assets"
+},
+{
+"name": "Bankgloucester",
+"city": "Gloucester",
+"state": "MA",
+"type": "Bank",
+"ownership": "$384M assets"
+},
+{
+"name": "United Roosevelt Savings Bank",
+"city": "Carteret",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$384M assets"
+},
+{
+"name": "Founders Bank",
+"city": "Washington",
+"state": "DC",
+"type": "Bank",
+"ownership": "$382M assets"
+},
+{
+"name": "The Harbor Bank Of Maryland",
+"city": "Baltimore",
+"state": "MD",
+"type": "Bank",
+"ownership": "$382M assets"
+},
+{
+"name": "Piscataqua Savings Bank",
+"city": "Portsmouth",
+"state": "NH",
+"type": "Bank",
+"ownership": "$381M assets"
+},
+{
+"name": "New Valley Bank & Trust",
+"city": "Springfield",
+"state": "MA",
+"type": "Bank",
+"ownership": "$381M assets"
+},
+{
+"name": "The Bank Of Glen Burnie",
+"city": "Glen Burnie",
+"state": "MD",
+"type": "Bank",
+"ownership": "$380M assets"
+},
+{
+"name": "Peoples Trust Company Of St. Albans",
+"city": "Saint Albans",
+"state": "VT",
+"type": "Bank",
+"ownership": "$380M assets"
+},
+{
+"name": "Cattaraugus County Bank",
+"city": "Little Valley",
+"state": "NY",
+"type": "Bank",
+"ownership": "$379M assets"
+},
+{
+"name": "First National Bank Of Griffin",
+"city": "Griffin",
+"state": "GA",
+"type": "Bank",
+"ownership": "$377M assets"
+},
+{
+"name": "First United National Bank",
+"city": "Fryburg",
+"state": "PA",
+"type": "Bank",
+"ownership": "$370M assets"
+},
+{
+"name": "The Farmers Bank Of Appomattox",
+"city": "Appomattox",
+"state": "VA",
+"type": "Bank",
+"ownership": "$369M assets"
+},
+{
+"name": "The North Country Savings Bank",
+"city": "Canton",
+"state": "NY",
+"type": "Bank",
+"ownership": "$366M assets"
+},
+{
+"name": "West View Savings Bank",
+"city": "Pittsburgh",
+"state": "PA",
+"type": "Bank",
+"ownership": "$365M assets"
+},
+{
+"name": "Rabun County Bank",
+"city": "Clayton",
+"state": "GA",
+"type": "Bank",
+"ownership": "$364M assets"
+},
+{
+"name": "Pioneer Bank",
+"city": "Stanley",
+"state": "VA",
+"type": "Bank",
+"ownership": "$363M assets"
+},
+{
+"name": "Gulfside Bank",
+"city": "Sarasota",
+"state": "FL",
+"type": "Bank",
+"ownership": "$362M assets"
+},
+{
+"name": "First Shore Federal Savings And Loan Association",
+"city": "Salisbury",
+"state": "MD",
+"type": "Bank",
+"ownership": "$362M assets"
+},
+{
+"name": "Commercial Bank And Trust Of Pa",
+"city": "Latrobe",
+"state": "PA",
+"type": "Bank",
+"ownership": "$360M assets"
+},
+{
+"name": "Citizens Savings Bank",
+"city": "Clarks Summit",
+"state": "PA",
+"type": "Bank",
+"ownership": "$359M assets"
+},
+{
+"name": "Roxboro Savings Bank, Ssb",
+"city": "Roxboro",
+"state": "NC",
+"type": "Bank",
+"ownership": "$358M assets"
+},
+{
+"name": "Locality Bank",
+"city": "Fort Lauderdale",
+"state": "FL",
+"type": "Bank",
+"ownership": "$358M assets"
+},
+{
+"name": "Legacy Bank",
+"city": "Grundy",
+"state": "VA",
+"type": "Bank",
+"ownership": "$358M assets"
+},
+{
+"name": "The First National Bank Of Mount Dora",
+"city": "Mount Dora",
+"state": "FL",
+"type": "Bank",
+"ownership": "$355M assets"
+},
+{
+"name": "Eastern Savings Bank, Fsb",
+"city": "Hunt Valley",
+"state": "MD",
+"type": "Bank",
+"ownership": "$354M assets"
+},
+{
+"name": "Flint Community Bank",
+"city": "Albany",
+"state": "GA",
+"type": "Bank",
+"ownership": "$352M assets"
+},
+{
+"name": "First National Bank Of Decatur County",
+"city": "Bainbridge",
+"state": "GA",
+"type": "Bank",
+"ownership": "$349M assets"
+},
+{
+"name": "Locus Bank, Inc.",
+"city": "Richmond",
+"state": "VA",
+"type": "Bank",
+"ownership": "$345M assets"
+},
+{
+"name": "Stifel Trust Company Delaware, National Association",
+"city": "Greenville",
+"state": "DE",
+"type": "Bank",
+"ownership": "$343M assets"
+},
+{
+"name": "Greenville Savings Bank",
+"city": "Greenville",
+"state": "PA",
+"type": "Bank",
+"ownership": "$342M assets"
+},
+{
+"name": "Desjardins Bank, National Association",
+"city": "Hallandale",
+"state": "FL",
+"type": "Bank",
+"ownership": "$341M assets"
+},
+{
+"name": "Franklin Bank",
+"city": "Pilesgrove",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$337M assets"
+},
+{
+"name": "Interamerican Bank, A Fsb",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$336M assets"
+},
+{
+"name": "First Southern Bank",
+"city": "Waycross",
+"state": "GA",
+"type": "Bank",
+"ownership": "$335M assets"
+},
+{
+"name": "Altoona First Savings Bank",
+"city": "Altoona",
+"state": "PA",
+"type": "Bank",
+"ownership": "$335M assets"
+},
+{
+"name": "Douglas National Bank",
+"city": "Douglas",
+"state": "GA",
+"type": "Bank",
+"ownership": "$332M assets"
+},
+{
+"name": "Bank Of Newington",
+"city": "Newington",
+"state": "GA",
+"type": "Bank",
+"ownership": "$331M assets"
+},
+{
+"name": "Charles River Bank",
+"city": "Medway",
+"state": "MA",
+"type": "Bank",
+"ownership": "$330M assets"
+},
+{
+"name": "Altamaha Bank & Trust Company",
+"city": "Vidalia",
+"state": "GA",
+"type": "Bank",
+"ownership": "$330M assets"
+},
+{
+"name": "American Community Bank",
+"city": "Glen Cove",
+"state": "NY",
+"type": "Bank",
+"ownership": "$325M assets"
+},
+{
+"name": "Bank Of Millbrook",
+"city": "Millbrook",
+"state": "NY",
+"type": "Bank",
+"ownership": "$322M assets"
+},
+{
+"name": "Craft Bank",
+"city": "Atlanta",
+"state": "GA",
+"type": "Bank",
+"ownership": "$322M assets"
+},
+{
+"name": "Sewickley Savings Bank",
+"city": "Sewickley",
+"state": "PA",
+"type": "Bank",
+"ownership": "$320M assets"
+},
+{
+"name": "The National Iron Bank",
+"city": "Salisbury",
+"state": "CT",
+"type": "Bank",
+"ownership": "$320M assets"
+},
+{
+"name": "Abacus Federal Savings Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$319M assets"
+},
+{
+"name": "United National Bank",
+"city": "Cairo",
+"state": "GA",
+"type": "Bank",
+"ownership": "$317M assets"
+},
+{
+"name": "Seneca Savings Bank, National Association",
+"city": "Baldwinsville",
+"state": "NY",
+"type": "Bank",
+"ownership": "$316M assets"
+},
+{
+"name": "Evermore Bank",
+"city": "Fort Lauderdale",
+"state": "FL",
+"type": "Bank",
+"ownership": "$314M assets"
+},
+{
+"name": "The Millyard Bank",
+"city": "Nashua",
+"state": "NH",
+"type": "Bank",
+"ownership": "$312M assets"
+},
+{
+"name": "Profile Bank",
+"city": "Rochester",
+"state": "NH",
+"type": "Bank",
+"ownership": "$310M assets"
+},
+{
+"name": "First National Bank Of South Carolina",
+"city": "Holly Hill",
+"state": "SC",
+"type": "Bank",
+"ownership": "$310M assets"
+},
+{
+"name": "Bank Of York",
+"city": "York",
+"state": "SC",
+"type": "Bank",
+"ownership": "$309M assets"
+},
+{
+"name": "Carthage Savings And Loan, National Association",
+"city": "Carthage",
+"state": "NY",
+"type": "Bank",
+"ownership": "$308M assets"
+},
+{
+"name": "First Colony Bank Of Florida",
+"city": "Maitland",
+"state": "FL",
+"type": "Bank",
+"ownership": "$307M assets"
+},
+{
+"name": "Community Banking Company",
+"city": "Fitzgerald",
+"state": "GA",
+"type": "Bank",
+"ownership": "$306M assets"
+},
+{
+"name": "Dlp Bank",
+"city": "Starke",
+"state": "FL",
+"type": "Bank",
+"ownership": "$305M assets"
+},
+{
+"name": "Durden Banking Company, Incorporated",
+"city": "Twin City",
+"state": "GA",
+"type": "Bank",
+"ownership": "$303M assets"
+},
+{
+"name": "1St Bank Of Sea Isle City",
+"city": "Sea Isle City",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$302M assets"
+},
+{
+"name": "Classic City Bank",
+"city": "Athens",
+"state": "GA",
+"type": "Bank",
+"ownership": "$302M assets"
+},
+{
+"name": "Farmers & Merchants Bank",
+"city": "Eatonton",
+"state": "GA",
+"type": "Bank",
+"ownership": "$299M assets"
+},
+{
+"name": "Washington Savings Bank",
+"city": "Lowell",
+"state": "MA",
+"type": "Bank",
+"ownership": "$299M assets"
+},
+{
+"name": "The Brattleboro Savings And Loan Association",
+"city": "Brattleboro",
+"state": "VT",
+"type": "Bank",
+"ownership": "$296M assets"
+},
+{
+"name": "Georgia First Bank",
+"city": "Soperton",
+"state": "GA",
+"type": "Bank",
+"ownership": "$296M assets"
+},
+{
+"name": "The Claxton Bank",
+"city": "Bellville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$295M assets"
+},
+{
+"name": "Natbank, National Association",
+"city": "Hollywood",
+"state": "FL",
+"type": "Bank",
+"ownership": "$292M assets"
+},
+{
+"name": "The Pennsville National Bank",
+"city": "Pennsville",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$290M assets"
+},
+{
+"name": "The Commercial Bank",
+"city": "Honea Path",
+"state": "SC",
+"type": "Bank",
+"ownership": "$290M assets"
+},
+{
+"name": "Business Bank, The",
+"city": "S Burlington",
+"state": "VT",
+"type": "Bank",
+"ownership": "$287M assets"
+},
+{
+"name": "First National Bank Of Pasco",
+"city": "Dade City",
+"state": "FL",
+"type": "Bank",
+"ownership": "$286M assets"
+},
+{
+"name": "Nantahala Bank & Trust Company",
+"city": "Franklin",
+"state": "NC",
+"type": "Bank",
+"ownership": "$286M assets"
+},
+{
+"name": "The Upstate National Bank",
+"city": "Ogdensburg",
+"state": "NY",
+"type": "Bank",
+"ownership": "$285M assets"
+},
+{
+"name": "Cayuga Lake National Bank",
+"city": "Union Springs",
+"state": "NY",
+"type": "Bank",
+"ownership": "$281M assets"
+},
+{
+"name": "Global Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$280M assets"
+},
+{
+"name": "Bankmiami",
+"city": "Coral Gables",
+"state": "FL",
+"type": "Bank",
+"ownership": "$279M assets"
+},
+{
+"name": "Sawyer Savings Bank",
+"city": "Saugerties",
+"state": "NY",
+"type": "Bank",
+"ownership": "$279M assets"
+},
+{
+"name": "New Horizon Bank, National Association",
+"city": "Powhatan",
+"state": "VA",
+"type": "Bank",
+"ownership": "$279M assets"
+},
+{
+"name": "First Federal Savings And Loan Association Of Valdosta",
+"city": "Valdosta",
+"state": "GA",
+"type": "Bank",
+"ownership": "$278M assets"
+},
+{
+"name": "The Peoples Bank",
+"city": "Eatonton",
+"state": "GA",
+"type": "Bank",
+"ownership": "$273M assets"
+},
+{
+"name": "First Federal Bank",
+"city": "Dunn",
+"state": "NC",
+"type": "Bank",
+"ownership": "$272M assets"
+},
+{
+"name": "Ab&T",
+"city": "Albany",
+"state": "GA",
+"type": "Bank",
+"ownership": "$272M assets"
+},
+{
+"name": "South Coast Bank & Trust",
+"city": "Brunswick",
+"state": "GA",
+"type": "Bank",
+"ownership": "$268M assets"
+},
+{
+"name": "Marblehead Bank",
+"city": "Marblehead",
+"state": "MA",
+"type": "Bank",
+"ownership": "$263M assets"
+},
+{
+"name": "South Georgia Bank",
+"city": "Glennville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$262M assets"
+},
+{
+"name": "Lee Bank And Trust Company",
+"city": "Pennington Gap",
+"state": "VA",
+"type": "Bank",
+"ownership": "$260M assets"
+},
+{
+"name": "Clarion County Community Bank",
+"city": "Clarion",
+"state": "PA",
+"type": "Bank",
+"ownership": "$260M assets"
+},
+{
+"name": "Wells River Savings Bank",
+"city": "Wells River",
+"state": "VT",
+"type": "Bank",
+"ownership": "$260M assets"
+},
+{
+"name": "Applied Bank",
+"city": "Wilmington",
+"state": "DE",
+"type": "Bank",
+"ownership": "$258M assets"
+},
+{
+"name": "Bank Of Holland",
+"city": "Holland",
+"state": "NY",
+"type": "Bank",
+"ownership": "$256M assets"
+},
+{
+"name": "Jim Thorpe Neighborhood Bank",
+"city": "Jim Thorpe",
+"state": "PA",
+"type": "Bank",
+"ownership": "$256M assets"
+},
+{
+"name": "Bny Mellon Trust Of Delaware",
+"city": "Wilmington",
+"state": "DE",
+"type": "Bank",
+"ownership": "$253M assets"
+},
+{
+"name": "Community Bank Of The South",
+"city": "Merritt Island",
+"state": "FL",
+"type": "Bank",
+"ownership": "$252M assets"
+},
+{
+"name": "Bank Of Easton",
+"city": "North Easton",
+"state": "MA",
+"type": "Bank",
+"ownership": "$251M assets"
+},
+{
+"name": "Bank Of Alapaha",
+"city": "Alapaha",
+"state": "GA",
+"type": "Bank",
+"ownership": "$251M assets"
+},
+{
+"name": "Community Bank Of Georgia",
+"city": "Baxley",
+"state": "GA",
+"type": "Bank",
+"ownership": "$249M assets"
+},
+{
+"name": "Lafayette State Bank",
+"city": "Mayo",
+"state": "FL",
+"type": "Bank",
+"ownership": "$246M assets"
+},
+{
+"name": "Gulf Atlantic Bank",
+"city": "Key West",
+"state": "FL",
+"type": "Bank",
+"ownership": "$245M assets"
+},
+{
+"name": "Penncrest Bank",
+"city": "Altoona",
+"state": "PA",
+"type": "Bank",
+"ownership": "$243M assets"
+},
+{
+"name": "American Bank Of The Carolinas",
+"city": "Monroe",
+"state": "NC",
+"type": "Bank",
+"ownership": "$243M assets"
+},
+{
+"name": "The Peoples Bank Of Georgia",
+"city": "Talbotton",
+"state": "GA",
+"type": "Bank",
+"ownership": "$243M assets"
+},
+{
+"name": "New Republic Bank",
+"city": "Roanoke Rapids",
+"state": "NC",
+"type": "Bank",
+"ownership": "$239M assets"
+},
+{
+"name": "The Turbotville National Bank",
+"city": "Turbotville",
+"state": "PA",
+"type": "Bank",
+"ownership": "$236M assets"
+},
+{
+"name": "Waycross Bank & Trust",
+"city": "Waycross",
+"state": "GA",
+"type": "Bank",
+"ownership": "$234M assets"
+},
+{
+"name": "Loyal Trust Bank",
+"city": "Johns Creek",
+"state": "GA",
+"type": "Bank",
+"ownership": "$234M assets"
+},
+{
+"name": "Embassy National Bank",
+"city": "Lawrenceville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$233M assets"
+},
+{
+"name": "Sei Private Trust Company",
+"city": "Oaks",
+"state": "PA",
+"type": "Bank",
+"ownership": "$231M assets"
+},
+{
+"name": "Cornerstone Bank",
+"city": "Lexington",
+"state": "VA",
+"type": "Bank",
+"ownership": "$228M assets"
+},
+{
+"name": "The First National Bank Of Waynesboro",
+"city": "Waynesboro",
+"state": "GA",
+"type": "Bank",
+"ownership": "$227M assets"
+},
+{
+"name": "Alpine Capital Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$225M assets"
+},
+{
+"name": "The Bank Of Charlotte County",
+"city": "Phenix",
+"state": "VA",
+"type": "Bank",
+"ownership": "$224M assets"
+},
+{
+"name": "Mcs Bank",
+"city": "Milroy",
+"state": "PA",
+"type": "Bank",
+"ownership": "$223M assets"
+},
+{
+"name": "Surety Bank",
+"city": "Deland",
+"state": "FL",
+"type": "Bank",
+"ownership": "$223M assets"
+},
+{
+"name": "The National Bank Of Malvern",
+"city": "Malvern",
+"state": "PA",
+"type": "Bank",
+"ownership": "$222M assets"
+},
+{
+"name": "Taylorsville Savings Bank, Ssb",
+"city": "Taylorsville",
+"state": "NC",
+"type": "Bank",
+"ownership": "$222M assets"
+},
+{
+"name": "Cypress Bank & Trust",
+"city": "Melbourne",
+"state": "FL",
+"type": "Bank",
+"ownership": "$221M assets"
+},
+{
+"name": "Citizens Community Bank",
+"city": "Hahira",
+"state": "GA",
+"type": "Bank",
+"ownership": "$218M assets"
+},
+{
+"name": "Vidalia Federal Savings Bank",
+"city": "Vidalia",
+"state": "GA",
+"type": "Bank",
+"ownership": "$214M assets"
+},
+{
+"name": "Iron Workers Savings Bank",
+"city": "Aston",
+"state": "PA",
+"type": "Bank",
+"ownership": "$213M assets"
+},
+{
+"name": "The First National Bank Of Groton",
+"city": "Groton",
+"state": "NY",
+"type": "Bank",
+"ownership": "$212M assets"
+},
+{
+"name": "The First National Bank Of Dryden",
+"city": "Dryden",
+"state": "NY",
+"type": "Bank",
+"ownership": "$211M assets"
+},
+{
+"name": "Apollo Trust Company",
+"city": "Apollo",
+"state": "PA",
+"type": "Bank",
+"ownership": "$211M assets"
+},
+{
+"name": "First Bank Of Coastal Georgia",
+"city": "Pembroke",
+"state": "GA",
+"type": "Bank",
+"ownership": "$210M assets"
+},
+{
+"name": "Madison County Community Bank",
+"city": "Madison",
+"state": "FL",
+"type": "Bank",
+"ownership": "$210M assets"
+},
+{
+"name": "Commonwealth Co-Operative Bank",
+"city": "Hyde Park",
+"state": "MA",
+"type": "Bank",
+"ownership": "$209M assets"
+},
+{
+"name": "The Geo. D. Warthen Bank",
+"city": "Sandersville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$207M assets"
+},
+{
+"name": "Legacy State Bank",
+"city": "Loganville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$206M assets"
+},
+{
+"name": "The Citizens Bank Of Cochran",
+"city": "Cochran",
+"state": "GA",
+"type": "Bank",
+"ownership": "$205M assets"
+},
+{
+"name": "Aroostook County Federal Savings And Loan Association",
+"city": "Caribou",
+"state": "ME",
+"type": "Bank",
+"ownership": "$204M assets"
+},
+{
+"name": "Massena Savings And Loan",
+"city": "Massena",
+"state": "NY",
+"type": "Bank",
+"ownership": "$201M assets"
+},
+{
+"name": "Gouverneur Savings And Loan Association",
+"city": "Gouverneur",
+"state": "NY",
+"type": "Bank",
+"ownership": "$199M assets"
+},
+{
+"name": "New Haven Bank",
+"city": "New Haven",
+"state": "CT",
+"type": "Bank",
+"ownership": "$198M assets"
+},
+{
+"name": "Magnolia State Bank",
+"city": "Eastman",
+"state": "GA",
+"type": "Bank",
+"ownership": "$198M assets"
+},
+{
+"name": "Bank Of Camilla",
+"city": "Camilla",
+"state": "GA",
+"type": "Bank",
+"ownership": "$195M assets"
+},
+{
+"name": "Blue Ridge Bank",
+"city": "Walhalla",
+"state": "SC",
+"type": "Bank",
+"ownership": "$195M assets"
+},
+{
+"name": "Wrentham Co-Operative Bank",
+"city": "Wrentham",
+"state": "MA",
+"type": "Bank",
+"ownership": "$195M assets"
+},
+{
+"name": "Mount Vernon Bank",
+"city": "Mount Vernon",
+"state": "GA",
+"type": "Bank",
+"ownership": "$195M assets"
+},
+{
+"name": "The First National Bank Of Absecon",
+"city": "Absecon",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$194M assets"
+},
+{
+"name": "Peoples Bank",
+"city": "Lyons",
+"state": "GA",
+"type": "Bank",
+"ownership": "$194M assets"
+},
+{
+"name": "Bank Of Richmondville",
+"city": "Cobleskill",
+"state": "NY",
+"type": "Bank",
+"ownership": "$193M assets"
+},
+{
+"name": "Savannah Bank National Association",
+"city": "Savannah",
+"state": "NY",
+"type": "Bank",
+"ownership": "$193M assets"
+},
+{
+"name": "Gulf Coast Business Bank",
+"city": "Fort Myers",
+"state": "FL",
+"type": "Bank",
+"ownership": "$192M assets"
+},
+{
+"name": "Farmers And Miners Bank",
+"city": "Pennington Gap",
+"state": "VA",
+"type": "Bank",
+"ownership": "$191M assets"
+},
+{
+"name": "Highlands Community Bank",
+"city": "Covington",
+"state": "VA",
+"type": "Bank",
+"ownership": "$190M assets"
+},
+{
+"name": "Farmers State Bank",
+"city": "Lincolnton",
+"state": "GA",
+"type": "Bank",
+"ownership": "$189M assets"
+},
+{
+"name": "Cbl State Savings Bank",
+"city": "Greer",
+"state": "SC",
+"type": "Bank",
+"ownership": "$188M assets"
+},
+{
+"name": "First Federal Savings And Loan Association Of Bath",
+"city": "Bath",
+"state": "ME",
+"type": "Bank",
+"ownership": "$187M assets"
+},
+{
+"name": "First Federal Savings Of Middletown",
+"city": "Middletown",
+"state": "NY",
+"type": "Bank",
+"ownership": "$186M assets"
+},
+{
+"name": "Walden Mutual Bank",
+"city": "Concord",
+"state": "NH",
+"type": "Bank",
+"ownership": "$182M assets"
+},
+{
+"name": "Slovenian Savings And Loan Association Of Franklin-Conemaugh",
+"city": "Conemaugh",
+"state": "PA",
+"type": "Bank",
+"ownership": "$181M assets"
+},
+{
+"name": "Commerce Bank & Trust",
+"city": "Winter Park",
+"state": "FL",
+"type": "Bank",
+"ownership": "$179M assets"
+},
+{
+"name": "The Haverford Trust Company",
+"city": "Radnor",
+"state": "PA",
+"type": "Bank",
+"ownership": "$178M assets"
+},
+{
+"name": "The Farmers Bank",
+"city": "Greensboro",
+"state": "GA",
+"type": "Bank",
+"ownership": "$177M assets"
+},
+{
+"name": "42 North Private Bank",
+"city": "Canton",
+"state": "MA",
+"type": "Bank",
+"ownership": "$176M assets"
+},
+{
+"name": "The Putnam County National Bank Of Carmel",
+"city": "Carmel",
+"state": "NY",
+"type": "Bank",
+"ownership": "$173M assets"
+},
+{
+"name": "The Warrington Bank",
+"city": "Pensacola",
+"state": "FL",
+"type": "Bank",
+"ownership": "$172M assets"
+},
+{
+"name": "Farmers And Merchants Bank",
+"city": "Sylvania",
+"state": "GA",
+"type": "Bank",
+"ownership": "$172M assets"
+},
+{
+"name": "Sharon Bank",
+"city": "Springfield",
+"state": "PA",
+"type": "Bank",
+"ownership": "$171M assets"
+},
+{
+"name": "Westmoreland Federal Savings And Loan Association",
+"city": "Latrobe",
+"state": "PA",
+"type": "Bank",
+"ownership": "$168M assets"
+},
+{
+"name": "Millville Savings Bank",
+"city": "Millville",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$168M assets"
+},
+{
+"name": "Unb Bank",
+"city": "Mount Carmel",
+"state": "PA",
+"type": "Bank",
+"ownership": "$166M assets"
+},
+{
+"name": "Jarrettsville Federal Savings And Loan Association",
+"city": "Jarrettsville",
+"state": "MD",
+"type": "Bank",
+"ownership": "$165M assets"
+},
+{
+"name": "Movement Bank",
+"city": "Danville",
+"state": "VA",
+"type": "Bank",
+"ownership": "$164M assets"
+},
+{
+"name": "West Central Georgia Bank",
+"city": "Thomaston",
+"state": "GA",
+"type": "Bank",
+"ownership": "$163M assets"
+},
+{
+"name": "Bank Of Dade",
+"city": "Trenton",
+"state": "GA",
+"type": "Bank",
+"ownership": "$161M assets"
+},
+{
+"name": "Bank Of Monticello",
+"city": "Monticello",
+"state": "GA",
+"type": "Bank",
+"ownership": "$160M assets"
+},
+{
+"name": "Bank Of Dawson",
+"city": "Dawson",
+"state": "GA",
+"type": "Bank",
+"ownership": "$160M assets"
+},
+{
+"name": "Family Bank",
+"city": "Pelham",
+"state": "GA",
+"type": "Bank",
+"ownership": "$159M assets"
+},
+{
+"name": "Farmers State Bank",
+"city": "Dublin",
+"state": "GA",
+"type": "Bank",
+"ownership": "$159M assets"
+},
+{
+"name": "Wsb Municipal Bank",
+"city": "Watertown",
+"state": "NY",
+"type": "Bank",
+"ownership": "$158M assets"
+},
+{
+"name": "Bank Of Greeleyville",
+"city": "Greeleyville",
+"state": "SC",
+"type": "Bank",
+"ownership": "$158M assets"
+},
+{
+"name": "Moultrie Bank & Trust",
+"city": "Moultrie",
+"state": "GA",
+"type": "Bank",
+"ownership": "$158M assets"
+},
+{
+"name": "Gsl Savings Bank",
+"city": "Guttenberg",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$156M assets"
+},
+{
+"name": "Bank Of Belle Glade",
+"city": "Belle Glade",
+"state": "FL",
+"type": "Bank",
+"ownership": "$156M assets"
+},
+{
+"name": "Belmont Savings Bank, Ssb",
+"city": "Belmont",
+"state": "NC",
+"type": "Bank",
+"ownership": "$156M assets"
+},
+{
+"name": "Pnb Community Bank",
+"city": "Niceville",
+"state": "FL",
+"type": "Bank",
+"ownership": "$155M assets"
+},
+{
+"name": "Canton Co-Operative Bank",
+"city": "Canton",
+"state": "MA",
+"type": "Bank",
+"ownership": "$154M assets"
+},
+{
+"name": "Community Bankers' Bank",
+"city": "Midlothian",
+"state": "VA",
+"type": "Bank",
+"ownership": "$154M assets"
+},
+{
+"name": "1St Federal Savings Bank Of Sc, Inc.",
+"city": "Walterboro",
+"state": "SC",
+"type": "Bank",
+"ownership": "$153M assets"
+},
+{
+"name": "Spratt Savings Bank",
+"city": "Chester",
+"state": "SC",
+"type": "Bank",
+"ownership": "$150M assets"
+},
+{
+"name": "Schuyler Savings Bank",
+"city": "Kearny",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$150M assets"
+},
+{
+"name": "The Merchants & Citizens Bank",
+"city": "Mcrae",
+"state": "GA",
+"type": "Bank",
+"ownership": "$148M assets"
+},
+{
+"name": "Eastbank, National Association",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$146M assets"
+},
+{
+"name": "Planters And Citizens Bank",
+"city": "Camilla",
+"state": "GA",
+"type": "Bank",
+"ownership": "$145M assets"
+},
+{
+"name": "Methuen Co-Operative Bank",
+"city": "Methuen",
+"state": "MA",
+"type": "Bank",
+"ownership": "$143M assets"
+},
+{
+"name": "Bank Of Pensacola",
+"city": "Pensacola",
+"state": "FL",
+"type": "Bank",
+"ownership": "$143M assets"
+},
+{
+"name": "Millbury National Bank",
+"city": "Millbury",
+"state": "MA",
+"type": "Bank",
+"ownership": "$141M assets"
+},
+{
+"name": "Deutsche Bank Trust Company Delaware",
+"city": "Newark",
+"state": "DE",
+"type": "Bank",
+"ownership": "$140M assets"
+},
+{
+"name": "Abbeville First Bank, Ssb",
+"city": "Abbeville",
+"state": "SC",
+"type": "Bank",
+"ownership": "$138M assets"
+},
+{
+"name": "Bank Of Hazlehurst",
+"city": "Hazlehurst",
+"state": "GA",
+"type": "Bank",
+"ownership": "$137M assets"
+},
+{
+"name": "Pickens Savings And Loan Association, Fa",
+"city": "Pickens",
+"state": "SC",
+"type": "Bank",
+"ownership": "$136M assets"
+},
+{
+"name": "The Citizens National Bank Of Quitman",
+"city": "Quitman",
+"state": "GA",
+"type": "Bank",
+"ownership": "$134M assets"
+},
+{
+"name": "Stoughton Co-Operative Bank",
+"city": "Stoughton",
+"state": "MA",
+"type": "Bank",
+"ownership": "$134M assets"
+},
+{
+"name": "The Chesapeake Bank & Trust Co.",
+"city": "Chestertown",
+"state": "MD",
+"type": "Bank",
+"ownership": "$134M assets"
+},
+{
+"name": "Maple City Savings Bank, Fsb",
+"city": "Hornell",
+"state": "NY",
+"type": "Bank",
+"ownership": "$123M assets"
+},
+{
+"name": "Farmers Building And Savings Bank",
+"city": "Rochester",
+"state": "PA",
+"type": "Bank",
+"ownership": "$122M assets"
+},
+{
+"name": "Peoples Bank Of Graceville",
+"city": "Graceville",
+"state": "FL",
+"type": "Bank",
+"ownership": "$118M assets"
+},
+{
+"name": "Carver State Bank",
+"city": "Savannah",
+"state": "GA",
+"type": "Bank",
+"ownership": "$115M assets"
+},
+{
+"name": "Monroe Savings Bank",
+"city": "Williamstown",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$113M assets"
+},
+{
+"name": "The Peoples Bank",
+"city": "Willacoochee",
+"state": "GA",
+"type": "Bank",
+"ownership": "$113M assets"
+},
+{
+"name": "Morganton Savings Bank, S.S.B.",
+"city": "Morganton",
+"state": "NC",
+"type": "Bank",
+"ownership": "$109M assets"
+},
+{
+"name": "Investment Savings Bank",
+"city": "Altoona",
+"state": "PA",
+"type": "Bank",
+"ownership": "$106M assets"
+},
+{
+"name": "The Glen Burnie Mutual Savings Bank",
+"city": "Glen Burnie",
+"state": "MD",
+"type": "Bank",
+"ownership": "$104M assets"
+},
+{
+"name": "United Orient Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$104M assets"
+},
+{
+"name": "Century Bank Of Florida",
+"city": "Tampa",
+"state": "FL",
+"type": "Bank",
+"ownership": "$104M assets"
+},
+{
+"name": "Auburn Savings Bank, Fsb",
+"city": "Auburn",
+"state": "ME",
+"type": "Bank",
+"ownership": "$102M assets"
+},
+{
+"name": "Woodruff Federal Savings And Loan Association",
+"city": "Woodruff",
+"state": "SC",
+"type": "Bank",
+"ownership": "$102M assets"
+},
+{
+"name": "Dedicated Community Bank",
+"city": "Darlington",
+"state": "SC",
+"type": "Bank",
+"ownership": "$102M assets"
+},
+{
+"name": "Bar Harbor Savings And Loan Association",
+"city": "Bar Harbor",
+"state": "ME",
+"type": "Bank",
+"ownership": "$102M assets"
+},
+{
+"name": "Port Richmond Savings",
+"city": "Philadelphia",
+"state": "PA",
+"type": "Bank",
+"ownership": "$97M assets"
+},
+{
+"name": "Armstrong County Building And Loan Association",
+"city": "Ford City",
+"state": "PA",
+"type": "Bank",
+"ownership": "$96M assets"
+},
+{
+"name": "Miners Exchange Bank",
+"city": "Coeburn",
+"state": "VA",
+"type": "Bank",
+"ownership": "$95M assets"
+},
+{
+"name": "Riverside Savings Bank, Ssb",
+"city": "Roanoke Rapids",
+"state": "NC",
+"type": "Bank",
+"ownership": "$94M assets"
+},
+{
+"name": "Farmers & Merchants Bank Of Craig County",
+"city": "New Castle",
+"state": "VA",
+"type": "Bank",
+"ownership": "$93M assets"
+},
+{
+"name": "Rockland Savings Bank, Fsb",
+"city": "Rockland",
+"state": "ME",
+"type": "Bank",
+"ownership": "$93M assets"
+},
+{
+"name": "Massmutual Private Wealth & Trust, Fsb",
+"city": "Springfield",
+"state": "MA",
+"type": "Bank",
+"ownership": "$92M assets"
+},
+{
+"name": "The First National Bank Of Orwell",
+"city": "Orwell",
+"state": "VT",
+"type": "Bank",
+"ownership": "$90M assets"
+},
+{
+"name": "First Bank Of Pike",
+"city": "Zebulon",
+"state": "GA",
+"type": "Bank",
+"ownership": "$90M assets"
+},
+{
+"name": "County Savings Bank",
+"city": "Essington",
+"state": "PA",
+"type": "Bank",
+"ownership": "$90M assets"
+},
+{
+"name": "Milton Savings Bank",
+"city": "Milton",
+"state": "PA",
+"type": "Bank",
+"ownership": "$90M assets"
+},
+{
+"name": "The Four County Bank",
+"city": "Allentown",
+"state": "GA",
+"type": "Bank",
+"ownership": "$90M assets"
+},
+{
+"name": "F & M Bank And Trust Company",
+"city": "Manchester",
+"state": "GA",
+"type": "Bank",
+"ownership": "$89M assets"
+},
+{
+"name": "First National Bank Of Wauchula",
+"city": "Wauchula",
+"state": "FL",
+"type": "Bank",
+"ownership": "$88M assets"
+},
+{
+"name": "First State Bank Of Randolph County",
+"city": "Cuthbert",
+"state": "GA",
+"type": "Bank",
+"ownership": "$88M assets"
+},
+{
+"name": "Integrity Bank For Business",
+"city": "Virginia Beach",
+"state": "VA",
+"type": "Bank",
+"ownership": "$87M assets"
+},
+{
+"name": "North Cambridge Co-Operative Bank",
+"city": "Cambridge",
+"state": "MA",
+"type": "Bank",
+"ownership": "$86M assets"
+},
+{
+"name": "Sunnyside Federal Savings And Loan Association Of Irvington",
+"city": "Irvington",
+"state": "NY",
+"type": "Bank",
+"ownership": "$86M assets"
+},
+{
+"name": "The Bank Of Edison",
+"city": "Edison",
+"state": "GA",
+"type": "Bank",
+"ownership": "$85M assets"
+},
+{
+"name": "Bank Of Hancock County",
+"city": "Sparta",
+"state": "GA",
+"type": "Bank",
+"ownership": "$85M assets"
+},
+{
+"name": "Rochelle State Bank",
+"city": "Rochelle",
+"state": "GA",
+"type": "Bank",
+"ownership": "$83M assets"
+},
+{
+"name": "Eastern National Bank",
+"city": "Miami",
+"state": "FL",
+"type": "Bank",
+"ownership": "$74M assets"
+},
+{
+"name": "Southeast First National Bank",
+"city": "Summerville",
+"state": "GA",
+"type": "Bank",
+"ownership": "$73M assets"
+},
+{
+"name": "Apex Banking Company Of Georgia",
+"city": "Cleveland",
+"state": "GA",
+"type": "Bank",
+"ownership": "$73M assets"
+},
+{
+"name": "Liberty Bank Of New Jersey",
+"city": "Verona",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$71M assets"
+},
+{
+"name": "The Security State Bank",
+"city": "Mcrae",
+"state": "GA",
+"type": "Bank",
+"ownership": "$70M assets"
+},
+{
+"name": "Tioga-Franklin Savings Bank",
+"city": "Philadelphia",
+"state": "PA",
+"type": "Bank",
+"ownership": "$69M assets"
+},
+{
+"name": "Fidelity Personal Trust Company, Fsb",
+"city": "Merrimack",
+"state": "NH",
+"type": "Bank",
+"ownership": "$68M assets"
+},
+{
+"name": "Homewood Federal Savings Bank",
+"city": "Baltimore",
+"state": "MD",
+"type": "Bank",
+"ownership": "$66M assets"
+},
+{
+"name": "The Blue Grass Valley Bank",
+"city": "Blue Grass",
+"state": "VA",
+"type": "Bank",
+"ownership": "$62M assets"
+},
+{
+"name": "Hsbc Trust Company (Delaware), National Association",
+"city": "Wilmington",
+"state": "DE",
+"type": "Bank",
+"ownership": "$57M assets"
+},
+{
+"name": "First Savings And Loan Association",
+"city": "Mebane",
+"state": "NC",
+"type": "Bank",
+"ownership": "$56M assets"
+},
+{
+"name": "Tarboro Savings Bank, Ssb",
+"city": "Tarboro",
+"state": "NC",
+"type": "Bank",
+"ownership": "$55M assets"
+},
+{
+"name": "Compass Savings Bank",
+"city": "Wilmerding",
+"state": "PA",
+"type": "Bank",
+"ownership": "$54M assets"
+},
+{
+"name": "Talbot State Bank",
+"city": "Woodland",
+"state": "GA",
+"type": "Bank",
+"ownership": "$51M assets"
+},
+{
+"name": "United Bank Of Philadelphia",
+"city": "Philadelphia",
+"state": "PA",
+"type": "Bank",
+"ownership": "$50M assets"
+},
+{
+"name": "The Trust Bank",
+"city": "Lenox",
+"state": "GA",
+"type": "Bank",
+"ownership": "$45M assets"
+},
+{
+"name": "Second Federal Savings And Loan Association Of Philadelphia",
+"city": "Philadelphia",
+"state": "PA",
+"type": "Bank",
+"ownership": "$44M assets"
+},
+{
+"name": "Black Mountain Savings Bank, Ssb",
+"city": "Black Mountain",
+"state": "NC",
+"type": "Bank",
+"ownership": "$43M assets"
+},
+{
+"name": "Home Federal Savings And Loan Association",
+"city": "Bamberg",
+"state": "SC",
+"type": "Bank",
+"ownership": "$40M assets"
+},
+{
+"name": "Pee Dee Federal Savings Bank",
+"city": "Marion",
+"state": "SC",
+"type": "Bank",
+"ownership": "$38M assets"
+},
+{
+"name": "Kingstree Federal Savings And Loan Association",
+"city": "Kingstree",
+"state": "SC",
+"type": "Bank",
+"ownership": "$38M assets"
+},
+{
+"name": "Five Rivers Bank",
+"city": "Paramus",
+"state": "NJ",
+"type": "Bank",
+"ownership": "$38M assets"
+},
+{
+"name": "Gs&L Municipal Bank",
+"city": "Gouverneur",
+"state": "NY",
+"type": "Bank",
+"ownership": "$37M assets"
+},
+{
+"name": "Bank Of Cattaraugus",
+"city": "Cattaraugus",
+"state": "NY",
+"type": "Bank",
+"ownership": "$35M assets"
+},
+{
+"name": "Members Trust Company",
+"city": "Tampa",
+"state": "FL",
+"type": "Bank",
+"ownership": "$35M assets"
+},
+{
+"name": "Metropolitan Bank And Trust Company",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$35M assets"
+},
+{
+"name": "Gala Bank",
+"city": "Ocala",
+"state": "FL",
+"type": "Bank",
+"ownership": "$34M assets"
+},
+{
+"name": "Martinsville First Savings Bank",
+"city": "Martinsville",
+"state": "VA",
+"type": "Bank",
+"ownership": "$32M assets"
+},
+{
+"name": "Jackson Savings Bank, Ssb",
+"city": "Sylva",
+"state": "NC",
+"type": "Bank",
+"ownership": "$31M assets"
+},
+{
+"name": "The Philadelphia Trust Company",
+"city": "Philadelphia",
+"state": "PA",
+"type": "Bank",
+"ownership": "$28M assets"
+},
+{
+"name": "The Citizens National Bank Of Hammond",
+"city": "Hammond",
+"state": "NY",
+"type": "Bank",
+"ownership": "$25M assets"
+},
+{
+"name": "First City Bank",
+"city": "Alpharetta",
+"state": "GA",
+"type": "Bank",
+"ownership": "$24M assets"
+},
+{
+"name": "Hertford Savings Bank, Ssb",
+"city": "Hertford",
+"state": "NC",
+"type": "Bank",
+"ownership": "$20M assets"
+},
+{
+"name": "Huntingdon Savings Bank",
+"city": "Huntingdon",
+"state": "PA",
+"type": "Bank",
+"ownership": "$18M assets"
+},
+{
+"name": "Cedar Hill National Bank",
+"city": "Charlotte",
+"state": "NC",
+"type": "Bank",
+"ownership": "$16M assets"
+},
+{
+"name": "Emigrant Mercantile Bank",
+"city": "New York",
+"state": "NY",
+"type": "Bank",
+"ownership": "$3M assets"
+}
+]
