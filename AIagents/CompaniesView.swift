@@ -157,6 +157,26 @@ struct CompanyDetailView: View {
                 }
             }
 
+            if let pay = store.salaries[company.name] {
+                Section("What they pay (public H-1B disclosures)") {
+                    if let laneMed = pay.lane_median, let laneN = pay.lane_n {
+                        LabeledContent("Your lane (PM/analyst/infra)",
+                                       value: "$\(laneMed.formatted()) median · \(laneN) filings")
+                    }
+                    LabeledContent("All roles", value: "$\(pay.median.formatted()) median · \(pay.n) filings")
+                    if let lo = pay.p25, let hi = pay.p75 {
+                        LabeledContent("Middle range", value: "$\(lo.formatted()) – $\(hi.formatted())")
+                    }
+                    let clears = pay.clears_floor ?? (pay.median >= store.salaryFloor)
+                    Label(clears
+                          ? "Clears your $\(store.salaryFloor.formatted()) floor — worth your time"
+                          : "Below your $\(store.salaryFloor.formatted()) floor — negotiate hard or skip",
+                          systemImage: clears ? "dollarsign.circle.fill" : "exclamationmark.triangle.fill")
+                        .font(.footnote)
+                        .foregroundStyle(clears ? .green : .orange)
+                }
+            }
+
             Section("Your angle") {
                 Label(company.suggestedRole, systemImage: "target")
                     .font(.footnote)

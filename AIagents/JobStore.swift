@@ -157,6 +157,74 @@ final class JobStore: ObservableObject {
         }
     }
 
+    /// Per-company salary stats from public H-1B disclosures (f500_salaries.json).
+    struct SalaryStat: Codable {
+        let n: Int
+        let median: Int
+        let p25: Int?
+        let p75: Int?
+        let lane_n: Int?
+        let lane_median: Int?
+        let clears_floor: Bool?
+    }
+
+    @Published var salaries: [String: SalaryStat] = [:]
+    @Published var salaryFloor: Int = 120_000
+
+    func refreshSalaries() async {
+        guard let url = URL(string: "https://assiamahs.github.io/scipio/f500_salaries.json") else { return }
+        struct Feed: Codable { let floor: Int?; let companies: [String: SalaryStat] }
+        if let (data, _) = try? await URLSession.shared.data(from: url),
+           let feed = try? JSONDecoder().decode(Feed.self, from: data) {
+            salaries = feed.companies
+            if let f = feed.floor { salaryFloor = f }
+        }
+    }
+
+    /// Funnel: resume-variant performance, ghosted applications, open invites.
+    struct VariantStat: Codable, Identifiable {
+        let resume: String
+        let sent: Int
+        let rejected: Int
+        let interviews: Int
+        let response_rate: Double
+        var id: String { resume }
+    }
+    struct Ghost: Codable, Identifiable {
+        let company: String
+        let role: String
+        let url: String
+        let days_silent: Int
+        var id: String { url }
+    }
+    struct OpenInvite: Codable, Identifiable {
+        let company: String?
+        let subject: String?
+        let date: String?
+        var id: String { (company ?? "") + (date ?? "") }
+    }
+
+    @Published var variantStats: [VariantStat] = []
+    @Published var ghosts: [Ghost] = []
+    @Published var openInvites: [OpenInvite] = []
+
+    func refreshFunnel() async {
+        guard let url = URL(string: "https://assiamahs.github.io/scipio/funnel_stats.json") else { return }
+        struct Feed: Codable {
+            let variants: [VariantStat]?
+            let ghosts: [Ghost]?
+            let open_invites: [OpenInvite]?
+        }
+        var request = URLRequest(url: url)
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+        if let (data, _) = try? await URLSession.shared.data(for: request),
+           let feed = try? JSONDecoder().decode(Feed.self, from: data) {
+            variantStats = feed.variants ?? []
+            ghosts = feed.ghosts ?? []
+            openInvites = feed.open_invites ?? []
+        }
+    }
+
     /// Job descriptions from scipio's jobs.json, keyed by posting URL —
     /// pairs each sent resume with the JD it was sent against.
     @Published var jdByURL: [String: String] = [:]

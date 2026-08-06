@@ -39,7 +39,54 @@ struct JobsView: View {
 
     private var appliedList: some View {
         List {
+            if !store.openInvites.isEmpty {
+                Section {
+                    ForEach(store.openInvites) { invite in
+                        VStack(alignment: .leading, spacing: 3) {
+                            Label("\(invite.company ?? "Someone") wants to talk — reply today",
+                                  systemImage: "bell.badge.fill")
+                                .font(.subheadline.bold())
+                                .foregroundStyle(.orange)
+                            if let s = invite.subject {
+                                Text(s).font(.caption).foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                } header: {
+                    Text("Needs your reply")
+                }
+            }
+
             statsHeader
+
+            if !store.variantStats.isEmpty {
+                Section("Resume variants — what actually gets responses") {
+                    ForEach(store.variantStats) { v in
+                        HStack {
+                            Text(v.resume
+                                .replacingOccurrences(of: "Resume - Sylvester Assiamah ", with: "")
+                                .replacingOccurrences(of: ".pdf", with: ""))
+                                .font(.footnote)
+                                .lineLimit(1)
+                            Spacer()
+                            Text("\(v.sent) sent · \(v.interviews) 🎯 · \(Int(v.response_rate * 100))%")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+            }
+
+            if !store.ghosts.isEmpty {
+                Section("Ghosted 21+ days — follow up or let go") {
+                    ForEach(store.ghosts.prefix(10)) { g in
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("\(g.company) — \(g.role)").font(.footnote)
+                            Text("\(g.days_silent) days silent").font(.caption).foregroundStyle(.tertiary)
+                        }
+                    }
+                }
+            }
 
             Section("My applications") {
                 if store.manual.isEmpty {
@@ -84,11 +131,15 @@ struct JobsView: View {
             await store.refreshScipio()
             await store.refreshResume()
             await store.refreshJobsFeed()
+            await store.refreshFunnel()
+            await store.refreshSalaries()
         }
         .task {
             if store.scipio.isEmpty { await store.refreshScipio() }
             await store.refreshResume()
             if store.jdByURL.isEmpty { await store.refreshJobsFeed() }
+            await store.refreshFunnel()
+            if store.salaries.isEmpty { await store.refreshSalaries() }
         }
     }
 
