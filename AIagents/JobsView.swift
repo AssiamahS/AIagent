@@ -8,6 +8,9 @@ struct JobsView: View {
     @State private var showAdd = false
     @State private var segment = 0
 
+    enum TileFilter { case all, week, confirmed, interviews }
+    @State private var tileFilter: TileFilter = .all
+
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
@@ -97,7 +100,7 @@ struct JobsView: View {
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                 }
-                ForEach(store.manualCompanies, id: \.company) { entry in
+                ForEach(filteredManualCompanies, id: \.company) { entry in
                     NavigationLink {
                         CompanyJobsList(company: entry.company)
                     } label: {
@@ -114,14 +117,14 @@ struct JobsView: View {
                 }
             }
 
-            Section("Auto-applied by Scipio") {
+            Section("Auto-applied by Scipio — \(filteredScipio.count)") {
                 if store.loadingScipio && store.scipio.isEmpty {
                     ProgressView()
                 }
                 if let err = store.scipioError {
                     Text(err).font(.footnote).foregroundStyle(.secondary)
                 }
-                ForEach(store.scipio.prefix(50)) { run in
+                ForEach(filteredScipio) { run in
                     NavigationLink {
                         ScipioJobDetailView(run: run)
                     } label: {
@@ -146,27 +149,70 @@ struct JobsView: View {
         }
     }
 
+    /// Tapping a tile filters both lists below; tapping it again clears.
     private var statsHeader: some View {
         Section {
             HStack(spacing: 10) {
-                statTile("\(store.manual.count + store.scipio.count)", "Total")
-                statTile("\(store.appliedThisWeek)", "This week")
-                statTile("\(store.confirmedCount)", "Confirmed")
-                statTile("\(store.manual.filter { $0.status == .interviewing }.count)", "Interviews")
+                statTile("\(store.manual.count + store.scipio.count)", "Total", .all)
+                statTile("\(store.appliedThisWeek)", "This week", .week)
+                statTile("\(store.confirmedCount)", "Confirmed", .confirmed)
+                statTile("\(store.manual.filter { $0.status == .interviewing }.count)", "Interviews", .interviews)
             }
             .listRowBackground(Color.clear)
             .listRowInsets(EdgeInsets())
         }
     }
 
-    private func statTile(_ value: String, _ label: String) -> some View {
-        VStack(spacing: 2) {
-            Text(value).font(.title3.bold())
-            Text(label).font(.caption2).foregroundStyle(.secondary)
+    private func statTile(_ value: String, _ label: String, _ filter: TileFilter) -> some View {
+        let selected = tileFilter == filter
+        return Button {
+            tileFilter = (tileFilter == filter) ? .all : filter
+        } label: {
+            VStack(spacing: 2) {
+                Text(value).font(.title3.bold())
+                Text(label).font(.caption2).foregroundStyle(selected ? .white : .secondary)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 12)
+            .background(selected ? Color.blue.opacity(0.45) : Color(white: 0.12),
+                        in: RoundedRectangle(cornerRadius: 12))
         }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 12)
-        .background(Color(white: 0.12), in: RoundedRectangle(cornerRadius: 12))
+        .buttonStyle(.plain)
+    }
+
+    private func isThisWeek(_ run: ScipioRun) -> Bool {
+        guard let t = run.timestamp,
+              let d = ISO8601DateFormatter().date(from: String(t.prefix(19)) + "Z") else { return false }
+        return Calendar.current.dateComponents([.day], from: d, to: Date()).day ?? 99 < 7
+    }
+
+    /// Every Scipio application ever logged, narrowed by the selected tile.
+    private var filteredScipio: [ScipioRun] {
+        switch tileFilter {
+        case .all: return store.scipio
+        case .week: return store.scipio.filter { isThisWeek($0) }
+        case .confirmed: return store.scipio.filter { $0.isConfirmed }
+        case .interviews: return []
+        }
+    }
+
+    private var filteredManualCompanies: [(company: String, count: Int)] {
+        switch tileFilter {
+        case .all, .confirmed:
+            return store.manualCompanies
+        case .week:
+            let recent = store.manual.filter {
+                Calendar.current.dateComponents([.day], from: $0.dateAdded, to: Date()).day ?? 99 < 7
+            }
+            return store.manualCompanies.filter { entry in
+                recent.contains { ($0.company.isEmpty ? "Unknown" : $0.company) == entry.company }
+            }
+        case .interviews:
+            let interviewing = store.manual.filter { $0.status == .interviewing }
+            return store.manualCompanies.filter { entry in
+                interviewing.contains { ($0.company.isEmpty ? "Unknown" : $0.company) == entry.company }
+            }
+        }
     }
 
     private func scipioRow(_ run: ScipioRun) -> some View {
