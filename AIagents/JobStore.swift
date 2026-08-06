@@ -134,6 +134,29 @@ final class JobStore: ObservableObject {
         UserDefaults.standard.string(forKey: "resumeText") ?? ""
     }
 
+    /// Coverage board row: what ATS a Fortune 500 company runs and whether
+    /// scipio can reach it. Fetched from the scipio pages site.
+    struct Coverage: Codable {
+        let name: String
+        let ats: String?
+        let board: String?
+        let applied: Int
+        let status: String   // applied | attemptable | workday | other_ats | unknown
+    }
+
+    @Published var coverage: [String: Coverage] = [:]   // keyed by company name
+
+    func refreshCoverage() async {
+        guard let url = URL(string: "https://assiamahs.github.io/scipio/f500_coverage.json") else { return }
+        struct Board: Codable { let companies: [Coverage] }
+        var request = URLRequest(url: url)
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+        if let (data, _) = try? await URLSession.shared.data(for: request),
+           let board = try? JSONDecoder().decode(Board.self, from: data) {
+            coverage = Dictionary(uniqueKeysWithValues: board.companies.map { ($0.name, $0) })
+        }
+    }
+
     func refreshResume() async {
         guard !UserDefaults.standard.bool(forKey: "resumeTextEdited") else { return }
         if let (data, _) = try? await URLSession.shared.data(from: Self.resumeURL),

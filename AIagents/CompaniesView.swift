@@ -42,6 +42,7 @@ struct CompaniesView: View {
     @State private var companies: [F500Company] = []
     @State private var search = ""
     @State private var sector: String = "All sectors"
+    @State private var onlyAttemptable = false
 
     private var sectors: [String] {
         ["All sectors"] + Array(Set(companies.map { $0.sector })).sorted()
@@ -50,8 +51,14 @@ struct CompaniesView: View {
     private var filtered: [F500Company] {
         companies.filter { c in
             (sector == "All sectors" || c.sector == sector) &&
-            (search.isEmpty || c.name.localizedCaseInsensitiveContains(search))
+            (search.isEmpty || c.name.localizedCaseInsensitiveContains(search)) &&
+            (!onlyAttemptable || isAttemptable(c))
         }
+    }
+
+    private func isAttemptable(_ c: F500Company) -> Bool {
+        let s = store.coverage[c.name]?.status
+        return s == "attemptable" || s == "applied"
     }
 
     var body: some View {
@@ -61,6 +68,7 @@ struct CompaniesView: View {
                     ForEach(sectors, id: \.self) { Text($0) }
                 }
                 .pickerStyle(.menu)
+                Toggle("Only auto-appliable now", isOn: $onlyAttemptable)
             }
             Section("Fortune 500 — \(filtered.count) companies") {
                 ForEach(filtered) { company in
@@ -74,16 +82,24 @@ struct CompaniesView: View {
         }
         .searchable(text: $search, prompt: "Company name")
         .onAppear { if companies.isEmpty { companies = F500Company.loadAll() } }
+        .task { if store.coverage.isEmpty { await store.refreshCoverage() } }
+        .refreshable { await store.refreshCoverage() }
     }
 
     private func row(_ company: F500Company) -> some View {
         HStack {
             VStack(alignment: .leading, spacing: 2) {
                 Text(company.name).font(.subheadline.weight(.semibold))
-                Text(company.sector).font(.caption).foregroundStyle(.secondary)
+                HStack(spacing: 6) {
+                    Text(company.sector).font(.caption).foregroundStyle(.secondary)
+                    if let cov = store.coverage[company.name] {
+                        statusChip(cov)
+                    }
+                }
             }
             Spacer()
-            let count = store.appliedCount(company: company.name)
+            let count = max(store.appliedCount(company: company.name),
+                            store.coverage[company.name]?.applied ?? 0)
             if count > 0 {
                 Text("\(count)")
                     .font(.caption.bold())
@@ -92,6 +108,23 @@ struct CompaniesView: View {
                     .foregroundStyle(.green)
             }
         }
+    }
+
+    private func statusChip(_ cov: JobStore.Coverage) -> some View {
+        let (text, color): (String, Color) = {
+            switch cov.status {
+            case "applied": return ("Applied", .green)
+            case "attemptable": return ("Ready — \(cov.ats ?? "board") found", .blue)
+            case "workday": return ("Workday — needs account flow", .orange)
+            case "other_ats": return ("\(cov.ats ?? "ATS") — handler needed", .purple)
+            default: return ("No public board found", .gray)
+            }
+        }()
+        return Text(text)
+            .font(.caption2.weight(.semibold))
+            .padding(.horizontal, 6).padding(.vertical, 2)
+            .background(color.opacity(0.2), in: Capsule())
+            .foregroundStyle(color)
     }
 }
 
@@ -111,6 +144,17 @@ struct CompanyDetailView: View {
                 LabeledContent("Rank", value: "#\(company.rank)")
                 LabeledContent("Sector", value: company.sector)
                 LabeledContent("Industry", value: company.industry)
+            }
+
+            if let cov = store.coverage[company.name] {
+                Section("Auto-apply status") {
+                    coverageExplainer(cov)
+                    if let board = cov.board, let boardURL = URL(string: board) {
+                        Link(destination: boardURL) {
+                            Label("Open their job board", systemImage: "list.bullet.rectangle")
+                        }
+                    }
+                }
             }
 
             Section("Your angle") {
@@ -158,6 +202,27 @@ struct CompanyDetailView: View {
         }
         .navigationTitle(company.name)
         .navigationBarTitleDisplayMode(.inline)
+    }
+
+    @ViewBuilder
+    private func coverageExplainer(_ cov: JobStore.Coverage) -> some View {
+        switch cov.status {
+        case "applied":
+            Label("Applied ×\(cov.applied) — Scipio has already reached this company.", systemImage: "checkmark.seal.fill")
+                .font(.footnote).foregroundStyle(.green)
+        case "attemptable":
+            Label("Ready: \(cov.ats ?? "board") detected — Scipio's handler can apply on the next run.", systemImage: "bolt.fill")
+                .font(.footnote).foregroundStyle(.blue)
+        case "workday":
+            Label("Workday tenant — blocked on per-tenant account creation. Fix queued: account flow + email-code reader.", systemImage: "exclamationmark.triangle.fill")
+                .font(.footnote).foregroundStyle(.orange)
+        case "other_ats":
+            Label("\(cov.ats ?? "ATS") board found — handler not written yet. Paste a job link below to apply through the app instead.", systemImage: "wrench.and.screwdriver.fill")
+                .font(.footnote).foregroundStyle(.purple)
+        default:
+            Label("No public board found by probing — open their careers site and paste a job link below.", systemImage: "questionmark.circle")
+                .font(.footnote).foregroundStyle(.secondary)
+        }
     }
 
     private func addJob() {
