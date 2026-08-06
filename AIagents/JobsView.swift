@@ -142,41 +142,51 @@ struct CompanyJobsList: View {
     @EnvironmentObject var store: JobStore
     let company: String
 
+    private var jobs: [ManualJob] {
+        store.manual.filter { ($0.company.isEmpty ? "Unknown" : $0.company) == company }
+    }
+
     var body: some View {
         List {
-            ForEach(store.manual.filter { ($0.company.isEmpty ? "Unknown" : $0.company) == company }) { job in
+            ForEach(jobs) { job in
                 NavigationLink {
                     JobDetailView(job: binding(for: job))
                 } label: {
-                    VStack(alignment: .leading, spacing: 3) {
-                        Text(job.role.isEmpty ? "Untitled role" : job.role)
-                            .font(.subheadline.weight(.semibold))
-                        HStack {
-                            Text(job.status.rawValue)
-                                .font(.caption2.weight(.semibold))
-                                .padding(.horizontal, 8).padding(.vertical, 2)
-                                .background(job.status.color.opacity(0.25), in: Capsule())
-                                .foregroundStyle(job.status.color)
-                            if let odds = job.score?.odds {
-                                Text("Odds \(odds)%")
-                                    .font(.caption2.weight(.semibold))
-                                    .padding(.horizontal, 8).padding(.vertical, 2)
-                                    .background(Color.purple.opacity(0.25), in: Capsule())
-                                    .foregroundStyle(.purple)
-                            }
-                        }
-                    }
+                    jobRow(job)
                 }
             }
-            .onDelete { offsets in
-                let mine = store.manual.filter { ($0.company.isEmpty ? "Unknown" : $0.company) == company }
-                for i in offsets {
-                    store.manual.removeAll { $0.id == mine[i].id }
-                }
-            }
+            .onDelete(perform: delete)
         }
         .navigationTitle(company)
         .navigationBarTitleDisplayMode(.inline)
+    }
+
+    private func jobRow(_ job: ManualJob) -> some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text(job.role.isEmpty ? "Untitled role" : job.role)
+                .font(.subheadline.weight(.semibold))
+            HStack {
+                statusChip(job.status.rawValue, color: job.status.color)
+                if let odds = job.score?.odds {
+                    statusChip("Odds \(odds)%", color: .purple)
+                }
+            }
+        }
+    }
+
+    private func statusChip(_ text: String, color: Color) -> some View {
+        Text(text)
+            .font(.caption2.weight(.semibold))
+            .padding(.horizontal, 8).padding(.vertical, 2)
+            .background(color.opacity(0.25), in: Capsule())
+            .foregroundStyle(color)
+    }
+
+    private func delete(_ offsets: IndexSet) {
+        let mine = jobs
+        for i in offsets {
+            store.manual.removeAll { $0.id == mine[i].id }
+        }
     }
 
     private func binding(for job: ManualJob) -> Binding<ManualJob> {
