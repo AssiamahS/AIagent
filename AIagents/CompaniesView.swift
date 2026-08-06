@@ -146,6 +146,18 @@ struct CompanyDetailView: View {
                 LabeledContent("Industry", value: company.industry)
             }
 
+            if let cov = store.coverage[company.name], cov.ats != nil {
+                Section {
+                    NavigationLink {
+                        JobSearchView(company: company, coverage: cov)
+                    } label: {
+                        Label("Search their open jobs", systemImage: "magnifyingglass.circle.fill")
+                            .font(.headline)
+                            .foregroundStyle(.blue)
+                    }
+                }
+            }
+
             if let cov = store.coverage[company.name] {
                 Section("Auto-apply status") {
                     coverageExplainer(cov)

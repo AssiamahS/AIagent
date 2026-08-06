@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 
 enum JobStatus: String, Codable, CaseIterable, Identifiable {
+    case saved = "Saved"
     case applied = "Applied"
     case interviewing = "Interviewing"
     case offer = "Offer"
@@ -11,6 +12,7 @@ enum JobStatus: String, Codable, CaseIterable, Identifiable {
 
     var color: Color {
         switch self {
+        case .saved: return .purple
         case .applied: return .blue
         case .interviewing: return .orange
         case .offer: return .green
@@ -142,6 +144,7 @@ final class JobStore: ObservableObject {
         let board: String?
         let applied: Int
         let status: String   // applied | attemptable | workday | other_ats | unknown
+        let site: String?    // workday career-site ID, discovered separately
     }
 
     @Published var coverage: [String: Coverage] = [:]   // keyed by company name
