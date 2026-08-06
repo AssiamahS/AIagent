@@ -199,6 +199,32 @@ struct CompanyDetailView: View {
                     }
                 }
             }
+
+            let auto = store.scipio.filter {
+                $0.displayCompany.localizedCaseInsensitiveContains(company.name) ||
+                company.name.localizedCaseInsensitiveContains($0.displayCompany)
+            }
+            if !auto.isEmpty {
+                Section("Scipio applied here — resumes sent") {
+                    ForEach(auto) { run in
+                        NavigationLink {
+                            ScipioJobDetailView(run: run)
+                        } label: {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(run.role ?? "Unknown role").font(.subheadline)
+                                HStack(spacing: 6) {
+                                    Text(run.day).font(.caption).foregroundStyle(.secondary)
+                                    if run.details?.resume != nil {
+                                        Label("resume PDF", systemImage: "doc.richtext")
+                                            .font(.caption)
+                                            .foregroundStyle(.blue)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         .navigationTitle(company.name)
         .navigationBarTitleDisplayMode(.inline)
