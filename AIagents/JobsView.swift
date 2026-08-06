@@ -307,6 +307,9 @@ struct JobDetailView: View {
     @Binding var job: ManualJob
     @State private var scoring = false
     @State private var scoreError: String?
+    @State private var dispatching = false
+    @State private var dispatchResult: String?
+    @AppStorage("githubPAT") private var githubPAT = ""
 
     var body: some View {
         Form {
@@ -330,6 +333,25 @@ struct JobDetailView: View {
             }
             Section {
                 Button {
+                    cloudApply()
+                } label: {
+                    if dispatching {
+                        HStack { ProgressView(); Text("Telling Scipio to apply…") }
+                    } else {
+                        Label("Have Scipio apply (cloud)", systemImage: "paperplane.fill")
+                            .font(.headline)
+                    }
+                }
+                .disabled(dispatching || job.url.isEmpty)
+                if let r = dispatchResult {
+                    Text(r).font(.caption).foregroundStyle(.secondary)
+                }
+            } footer: {
+                Text("Runs in the cloud with a resume tailored to this exact job description — no laptop needed. Check Applied in ~15 minutes for the result and the PDF sent.")
+            }
+
+            Section {
+                Button {
                     engine.prepareInterview(role: job.role, company: job.company,
                                             jobDescription: job.jobDescription)
                 } label: {
@@ -340,6 +362,37 @@ struct JobDetailView: View {
         }
         .navigationTitle(job.company.isEmpty ? "Job" : job.company)
         .navigationBarTitleDisplayMode(.inline)
+    }
+
+    private func cloudApply() {
+        guard !githubPAT.isEmpty else {
+            dispatchResult = "Add your GitHub token in Settings first (Cloud apply section)."
+            return
+        }
+        dispatching = true
+        dispatchResult = nil
+        Task {
+            defer { dispatching = false }
+            var request = URLRequest(url: URL(string:
+                "https://api.github.com/repos/AssiamahS/scipio/actions/workflows/auto-apply.yml/dispatches")!)
+            request.httpMethod = "POST"
+            request.setValue("Bearer \(githubPAT)", forHTTPHeaderField: "Authorization")
+            request.setValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
+            request.httpBody = try? JSONSerialization.data(withJSONObject:
+                ["ref": "main", "inputs": ["mode": "apply", "url": job.url]])
+            do {
+                let (_, response) = try await URLSession.shared.data(for: request)
+                if (response as? HTTPURLResponse)?.statusCode == 204 {
+                    dispatchResult = "Queued — Scipio is applying with a JD-tailored resume. Pull-refresh Applied in ~15 min."
+                    job.status = .applied
+                    job.notes = (job.notes.isEmpty ? "" : job.notes + "\n") + "Cloud apply dispatched."
+                } else {
+                    dispatchResult = "GitHub said \((response as? HTTPURLResponse)?.statusCode ?? 0) — check the token's scope (Actions read-write on scipio)."
+                }
+            } catch {
+                dispatchResult = "Network error — try again."
+            }
+        }
     }
 
     @ViewBuilder

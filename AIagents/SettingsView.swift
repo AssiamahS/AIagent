@@ -4,6 +4,7 @@ struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
     @AppStorage("candidateName") private var candidateName = "Candidate"
     @AppStorage("openRouterKey") private var openRouterKey = ""
+    @AppStorage("githubPAT") private var githubPAT = ""
     @AppStorage("openRouterModel") private var openRouterModel = ""
     @AppStorage("elevenLabsKey") private var elevenKey = ""
     @AppStorage("elevenLabsVoiceId") private var elevenVoice = ""
@@ -28,6 +29,16 @@ struct SettingsView: View {
                     Text("AI Brain — OpenRouter (free)")
                 } footer: {
                     Text("Free adaptive questions + real scoring via OpenRouter's free models (default: google/gemma-4-26b-a4b-it:free). Get a key at openrouter.ai. Without it, the app uses a built-in question bank.")
+                }
+
+                Section {
+                    SecureField("GitHub token (repo+actions on scipio)", text: $githubPAT)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
+                } header: {
+                    Text("Cloud apply — Scipio")
+                } footer: {
+                    Text("Lets the app tell Scipio to apply to a job from the cloud. Fine-grained token at github.com/settings/personal-access-tokens scoped to AssiamahS/scipio with Actions read-write.")
                 }
 
                 Section {
