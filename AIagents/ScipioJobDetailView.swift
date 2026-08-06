@@ -4,7 +4,13 @@ import SwiftUI
 /// scores, missing ATS keywords, the exact resume PDF sent.
 struct ScipioJobDetailView: View {
     @EnvironmentObject var engine: InterviewEngine
+    @EnvironmentObject var store: JobStore
     let run: ScipioRun
+
+    private var jobDescription: String {
+        guard let u = run.url else { return "" }
+        return store.jdByURL[u] ?? ""
+    }
 
     var body: some View {
         List {
@@ -53,6 +59,15 @@ struct ScipioJobDetailView: View {
                 }
             }
 
+            if !jobDescription.isEmpty {
+                Section("Job description it was sent against") {
+                    Text(jobDescription)
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(nil)
+                }
+            }
+
             Section {
                 if let urlString = run.url, let url = URL(string: urlString) {
                     Link(destination: url) {
@@ -62,7 +77,7 @@ struct ScipioJobDetailView: View {
                 Button {
                     engine.prepareInterview(role: run.role ?? "",
                                             company: run.displayCompany,
-                                            jobDescription: "")
+                                            jobDescription: jobDescription)
                 } label: {
                     Label("Practice this interview with Victoria", systemImage: "video.fill")
                 }

@@ -157,6 +157,31 @@ final class JobStore: ObservableObject {
         }
     }
 
+    /// Job descriptions from scipio's jobs.json, keyed by posting URL —
+    /// pairs each sent resume with the JD it was sent against.
+    @Published var jdByURL: [String: String] = [:]
+
+    func refreshJobsFeed() async {
+        guard let url = URL(string: "https://assiamahs.github.io/scipio/jobs.json") else { return }
+        struct Feed: Codable { let jobs: [Entry] }
+        struct Entry: Codable {
+            let url: String?
+            let description: String?
+        }
+        var request = URLRequest(url: url)
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+        if let (data, _) = try? await URLSession.shared.data(for: request),
+           let feed = try? JSONDecoder().decode(Feed.self, from: data) {
+            var map: [String: String] = [:]
+            for j in feed.jobs {
+                if let u = j.url, let d = j.description, !u.isEmpty, !d.isEmpty {
+                    map[u] = d
+                }
+            }
+            jdByURL = map
+        }
+    }
+
     func refreshResume() async {
         guard !UserDefaults.standard.bool(forKey: "resumeTextEdited") else { return }
         if let (data, _) = try? await URLSession.shared.data(from: Self.resumeURL),

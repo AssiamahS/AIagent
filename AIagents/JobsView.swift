@@ -83,10 +83,12 @@ struct JobsView: View {
         .refreshable {
             await store.refreshScipio()
             await store.refreshResume()
+            await store.refreshJobsFeed()
         }
         .task {
             if store.scipio.isEmpty { await store.refreshScipio() }
             await store.refreshResume()
+            if store.jdByURL.isEmpty { await store.refreshJobsFeed() }
         }
     }
 
