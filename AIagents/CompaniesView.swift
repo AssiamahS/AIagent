@@ -137,6 +137,7 @@ struct CompanyDetailView: View {
     @State private var fetching = false
     @State private var fetchError: String?
     @State private var savedJob = false
+    @State private var applyStatus: String?
 
     var body: some View {
         List {
@@ -197,7 +198,7 @@ struct CompanyDetailView: View {
                 }
             }
 
-            Section("Add a job from their site") {
+            Section("Paste a job link — Scipio applies") {
                 TextField("Paste job posting link", text: $jobLink)
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
@@ -209,14 +210,17 @@ struct CompanyDetailView: View {
                     addJob()
                 } label: {
                     if fetching {
-                        HStack { ProgressView(); Text("Fetching job description…") }
+                        HStack { ProgressView(); Text("Queueing Scipio + reading the posting…") }
                     } else if savedJob {
-                        Label("Added — check My Applications", systemImage: "checkmark.circle.fill")
+                        Label("Sent to Scipio — tracked in My Applications", systemImage: "checkmark.circle.fill")
                     } else {
-                        Label("Fetch description & add to my jobs", systemImage: "square.and.arrow.down")
+                        Label("Have Scipio apply to this job", systemImage: "paperplane.fill")
                     }
                 }
                 .disabled(fetching || jobLink.isEmpty)
+                if let s = applyStatus {
+                    Text(s).font(.caption).foregroundStyle(.secondary)
+                }
             }
 
             let mine = store.manual.filter { $0.company.localizedCaseInsensitiveContains(company.name) }
@@ -288,15 +292,19 @@ struct CompanyDetailView: View {
         fetching = true
         Task {
             defer { fetching = false }
+            async let queued = ScipioCloud.apply(jobURL: jobLink)
             let fetched = await JDFetcher.fetch(from: jobLink)
             let jd = fetched.jobDescription ?? ""
             if jd.isEmpty {
-                fetchError = "Couldn't extract the description (site may need JavaScript) — job saved anyway, paste the JD in its page."
+                fetchError = "Couldn't extract the description (site may need JavaScript) — Scipio still got the URL."
             }
+            let result = await queued
+            applyStatus = result.message
             store.manual.insert(
                 ManualJob(company: fetched.company ?? company.name,
                           role: fetched.role ?? company.suggestedRole,
-                          url: jobLink, status: .applied, jobDescription: jd),
+                          url: jobLink, status: .applied, jobDescription: jd,
+                          notes: result.ok ? "Sent to Scipio's cloud queue." : "Scipio queue failed — retry from the job page."),
                 at: 0)
             savedJob = true
         }

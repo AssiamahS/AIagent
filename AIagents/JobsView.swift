@@ -345,7 +345,6 @@ struct JobDetailView: View {
     @State private var dispatchResult: String?
     @State private var refetching = false
     @State private var refetchNote: String?
-    @AppStorage("githubPAT") private var githubPAT = ""
 
     var body: some View {
         Form {
@@ -442,32 +441,15 @@ struct JobDetailView: View {
     }
 
     private func cloudApply() {
-        guard !githubPAT.isEmpty else {
-            dispatchResult = "Add your GitHub token in Settings first (Cloud apply section)."
-            return
-        }
         dispatching = true
         dispatchResult = nil
         Task {
             defer { dispatching = false }
-            var request = URLRequest(url: URL(string:
-                "https://api.github.com/repos/AssiamahS/scipio/actions/workflows/auto-apply.yml/dispatches")!)
-            request.httpMethod = "POST"
-            request.setValue("Bearer \(githubPAT)", forHTTPHeaderField: "Authorization")
-            request.setValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
-            request.httpBody = try? JSONSerialization.data(withJSONObject:
-                ["ref": "main", "inputs": ["mode": "apply", "url": job.url]])
-            do {
-                let (_, response) = try await URLSession.shared.data(for: request)
-                if (response as? HTTPURLResponse)?.statusCode == 204 {
-                    dispatchResult = "Queued — Scipio is applying with a JD-tailored resume. Pull-refresh Applied in ~15 min."
-                    job.status = .applied
-                    job.notes = (job.notes.isEmpty ? "" : job.notes + "\n") + "Cloud apply dispatched."
-                } else {
-                    dispatchResult = "GitHub said \((response as? HTTPURLResponse)?.statusCode ?? 0) — check the token's scope (Actions read-write on scipio)."
-                }
-            } catch {
-                dispatchResult = "Network error — try again."
+            let result = await ScipioCloud.apply(jobURL: job.url)
+            dispatchResult = result.message
+            if result.ok {
+                job.status = .applied
+                job.notes = (job.notes.isEmpty ? "" : job.notes + "\n") + "Sent to Scipio's cloud queue."
             }
         }
     }
