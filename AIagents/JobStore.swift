@@ -156,7 +156,13 @@ final class JobStore: ObservableObject {
         request.cachePolicy = .reloadIgnoringLocalCacheData
         if let (data, _) = try? await URLSession.shared.data(for: request),
            let board = try? JSONDecoder().decode(Board.self, from: data) {
-            coverage = Dictionary(uniqueKeysWithValues: board.companies.map { ($0.name, $0) })
+            // The feed occasionally carries duplicate company names — uniqueKeysWithValues
+            // traps on those and killed the F500 tab. Keep the better entry instead.
+            coverage = Dictionary(board.companies.map { ($0.name, $0) },
+                                  uniquingKeysWith: { a, b in
+                                      if a.applied != b.applied { return a.applied > b.applied ? a : b }
+                                      return a.ats != nil ? a : b
+                                  })
         }
     }
 
