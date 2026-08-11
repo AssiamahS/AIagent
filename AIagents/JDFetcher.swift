@@ -26,6 +26,24 @@ enum JDFetcher {
         if host.contains("smartrecruiters.com") { return ("SmartRecruiters", false) }
         if host.contains("taleo.net") { return ("Taleo", false) }
         if host.contains("workable.com") { return ("Workable", false) }
+        if host.contains("careers.walmart.com") { return ("Walmart Careers", false) }
+        return nil
+    }
+
+    /// Apply-flow pages (cart, login, checkout) that can never yield a JD —
+    /// catches e.g. careers.walmart.com/us/en/reviewCart shared mid-application.
+    static func nonPostingReason(for urlString: String) -> String? {
+        guard let url = URL(string: urlString) else { return nil }
+        let cartPages: Set<String> = ["reviewcart", "cart", "checkout"]
+        let accountPages: Set<String> = ["login", "signin", "sign-in", "signup", "sign-up",
+                                         "register", "myaccount", "my-account"]
+        let segments = url.path.lowercased().split(separator: "/").map(String.init)
+        if segments.contains(where: { cartPages.contains($0) }) {
+            return "That link is the site's application cart, not a job posting — open the job's own page and paste that link instead."
+        }
+        if segments.contains(where: { accountPages.contains($0) }) {
+            return "That link is a login/account page, not a job posting — open the job's own page and paste that link instead."
+        }
         return nil
     }
 
@@ -36,6 +54,7 @@ enum JDFetcher {
 
         guard let html = await fetchHTML(url) else { return Result() }
         if let r = fromJSONLD(html) { return r }
+        if let r = fromNextData(html) { return r }
         if let r = fromOGDescription(html) { return r }
         let text = cleanLines(JobSearchView.stripHTML(html))
         return Result(company: nil, role: nil,
@@ -119,6 +138,33 @@ enum JDFetcher {
         if types.contains("JobPosting") { return dict }
         if let graph = dict["@graph"] { return findJobPosting(graph) }
         return nil
+    }
+
+    // MARK: - Tier 2.5: Next.js data blob (careers.walmart.com and similar)
+
+    /// Walmart-style career sites ship the posting inside <script id="__NEXT_DATA__">
+    /// as props.pageProps.jobDetails with no JSON-LD, so Tier 2 misses them.
+    private static func fromNextData(_ html: String) -> Result? {
+        let pattern = "<script[^>]*id\\s*=\\s*[\"']?__NEXT_DATA__[\"']?[^>]*>(.*?)</script>"
+        guard let regex = try? NSRegularExpression(pattern: pattern,
+                                                   options: [.dotMatchesLineSeparators, .caseInsensitive])
+        else { return nil }
+        let ns = html as NSString
+        guard let m = regex.firstMatch(in: html, range: NSRange(location: 0, length: ns.length))
+        else { return nil }
+        let raw = ns.substring(with: m.range(at: 1))
+        guard let data = raw.data(using: .utf8),
+              let doc = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+              let props = doc["props"] as? [String: Any],
+              let page = props["pageProps"] as? [String: Any],
+              let job = page["jobDetails"] as? [String: Any] else { return nil }
+        let desc = JobSearchView.stripHTML(job["description"] as? String ?? "")
+        guard desc.count > 200 else { return nil }
+        let company = (job["brand"] as? String)
+            ?? ((job["organizationData"] as? [String: Any])?["name"] as? String)
+        return Result(company: company,
+                      role: (job["title"] as? String) ?? (job["jobPostingTitle"] as? String),
+                      jobDescription: String(desc.prefix(8000)))
     }
 
     // MARK: - Tier 3 + 4: meta tag, filtered text

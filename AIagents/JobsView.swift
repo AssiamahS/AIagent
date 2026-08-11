@@ -470,6 +470,10 @@ struct JobDetailView: View {
     }
 
     private func refetchJD() {
+        if let why = JDFetcher.nonPostingReason(for: job.url) {
+            refetchNote = why
+            return
+        }
         refetching = true
         refetchNote = nil
         Task {
@@ -487,6 +491,10 @@ struct JobDetailView: View {
     }
 
     private func cloudApply() {
+        if let why = JDFetcher.nonPostingReason(for: job.url) {
+            dispatchResult = why
+            return
+        }
         dispatching = true
         dispatchResult = nil
         Task {
